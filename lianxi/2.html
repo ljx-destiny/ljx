@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{border: 1px solid red;}
+		</style>
+	</head>
+	<body>
+		<button id="btn">西安</button>
+		<div id="div" style="display: none;">
+			你好啊
+		</div>
+		
+		<script>
+			var btn = document.getElementById("btn");
+			var div = document.getElementById("div");
+			
+			btn.onclick = function(){
+//				div.style.display = "block";
+				if (div.style.display == "none") {
+					div.style.display = "block"
+				} else{
+					div.style.display = "none"
+				}
+			}
+		</script>
+	</body>
+</html>

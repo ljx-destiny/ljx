@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<div id="oDiv">
+			<span>"你好"</span>
+		</div>
+		
+		<script type="text/javascript">
+			var oDiv = document.getElementById("oDiv");
+			
+			//可以得到标签
+			//alert(oDiv.innerHTML);//<span>"你好"</span>
+			
+			//可以得到文本
+			//alert(oDiv.innerText);//"你好"
+			
+			//oDiv.innerHTML = "<p>" + 123 + "</P>";
+			oDiv.innerText = "<p>" + 123 + "</P>";
+		</script>
+	</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="add">
+			<input type="text" />+<input type="text"/><button>=</button><span></span><br />					
+		</div>
+		<div id="minus">
+			<input type="text" />-<input type="text"/><button>=</button><span></span><br />					
+		</div>
+
+		
+		<script type="text/javascript">
+//			function add(a,b){
+//				alert(a+b)
+//			}
+//			add(2,5)
+//			add(3,5)
+//			add(21,5)
+//			add(2,125)
+//			add(43,5)
+
+//			function minus(a,b){
+//				alert(a-b)
+//			}
+//			minus(5,1)
+//			minus(15,2)
+//			minus(55,13)
+//			minus(14,12)
+
+//			function multiply(a,b){
+//				alert(a*b)
+//			}
+//			multiply(5,1)
+//			multiply(15,2)
+//			multiply(55,13)
+//			multiply(14,12)
+
+//			function divide(a,b){
+//				alert(a/b)
+//			}
+//			divide(5,1)
+//			divide(15,2)
+//			divide(55,13)
+//			divide(14,12)
+
+			var minus = document.getElementById('minus')
+			aaa(minus,'-')
+			var add = document.getElementById('add');
+			aaa(add,'+')
+			function aaa(add,op){
+				var addTxt = document.getElementsByTagName("input")
+				var addBtn = document.getElementsByTagName("button")
+				var addSpan = document.getElementsByTagName("span")
+				addBtn[0].onclick = function(){
+					if (op=='+') {
+						addSpan[0].innerHTML = parseInt(addTxt[0].value)+parseInt(addTxt[1].value)				
+					}
+				}
+				addBtn[1].onclick = function(){
+					if (op=='-') {
+						addSpan[1].innerHTML = parseInt(addTxt[2].value)-parseInt(addTxt[3].value)				
+					}
+				}
+				
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="UTF-8">
+		<title>表单验证</title>
+	</head>
+	<body>
+		<div ng-controller="Aaa">
+			<form action="" name="oForm">
+				<input type="email" name="oInput" ng-model="text"/>
+				
+				<p>验证通过: {{ oForm.oInput.$valid }}</p>
+				<p>验证未通过: {{ oForm.oInput.$invalid }}</p>
+				<p>初始值: {{ oForm.oInput.$pristine }}</p>
+				<p>改变后的值: {{ oForm.oInput.$dirty }}</p>
+				<p>error信息: {{ oForm.oInput.$error }}</p>
+			</form>
+		</div>
+		
+		<script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			var m1 = angular.module('myApp',[]);
+			m1.controller('Aaa',function($scope){
+				$scope.name = "张三";
+			})
+			
+		</script>
+	</body>
+</html>

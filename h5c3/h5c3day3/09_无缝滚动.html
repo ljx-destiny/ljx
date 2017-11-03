@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>无缝滚动</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.rolling{
+				width: 800px;
+				height: 130px;
+				border: 10px solid #ccc;
+				margin: 100px auto;
+				position: relative;
+				overflow: hidden;
+			}
+			.rolling .m_unit{
+				/*运动的单位
+				这个宽度如果不够足以致命
+				为了让所有的li能够并排
+				这个宽度可以取值大一些*/
+				width: 5000px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				animation: move 3s linear 0s infinite;
+			}
+			.rolling ul{
+				list-style: none;
+			}
+			.rolling ul li{
+				float: left;
+				margin-right: 10px;
+			}
+			@-webkit-keyframes move{
+				from{
+					left: 0;
+					
+				}
+				to{
+					left: -1050px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="rolling" id="rolling">
+			<div class="m_unit" id="m_unit">
+				<ul>
+					<li><a href=""><img src="img/1.png"/></a></li>
+					<li><a href=""><img src="img/2.png"/></a></li>
+					<li><a href=""><img src="img/3.png"/></a></li>
+					<li><a href=""><img src="img/4.png"/></a></li>
+					<li><a href=""><img src="img/5.png"/></a></li>
+					<li><a href=""><img src="img/1.png"/></a></li>
+					<li><a href=""><img src="img/2.png"/></a></li>
+					<li><a href=""><img src="img/3.png"/></a></li>
+					<li><a href=""><img src="img/4.png"/></a></li>
+					<li><a href=""><img src="img/5.png"/></a></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

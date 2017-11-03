@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>淘宝首页</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				text-decoration: none;
+				color: #666;
+			}
+			.top {
+				width: 1200px;
+				height: 36px;
+				margin: 0 auto;
+				background-color: #F5F5F5;
+			}
+			.top li {
+				text-align: center;
+				float: left;
+				width: 60px;
+				height: 35px;
+				line-height: 35px;
+				font-size: 12px;
+				position: relative;
+			}
+			.top .zuo .dalu {
+				width: 100px;
+				height: 35px;
+			}
+			.top .zuo .dalu ul{
+				position: absolute;
+				left: 20px;
+				top: 30px;
+				display: none;
+				background-color: white;
+			}
+			.top .zuo .dalu:hover ul{display: inline-block;}
+			.top li a:hover {
+				color: #FF5400;
+			}
+			.top .you{
+				float: right;
+			}
+			.top .you .wode{
+				width: 60px;
+				height: 35px;
+			}
+			.top .you .wode ul{
+				position: absolute;
+				right: -5px;
+				top: 30px;
+				display: none; 
+				background-color: white;
+			}
+			.top .you .wode:hover ul{display: inline-block;}
+			
+			.tu{
+				width: 100%;
+				height: 70px;
+				background-color: #180054;
+			}
+			.sosuo {
+				width: 1200px;
+				height: 140px;
+				margin: 0 auto;
+			}
+			.sosuo li {
+				text-align: center;
+				float: left;
+				width: 50px;
+				height: 30px;
+				line-height: 30px;
+				margin-top: 40px;
+				left: 75px;
+				font-size: 16px;
+				color: #FF5400;
+				position: relative;
+			}
+			.sosuo .kuang {
+				float: left;
+				margin-top: 65px;
+				margin-left: 270px;
+				position: absolute;
+			}
+			.sosuo .ma {
+				float: right;
+				margin-top: 45px;
+				margin-right: 50px;
+			}
+			.sosuo .remen {
+				width: 625px;
+				height: 20px;
+				float: left;
+				margin-top: 40px;
+				margin-left: 80px;
+				font-size: 12px;
+			}
+			.sosuo .remen a:hover {
+				color: #FF5400;
+			}
+			
+			.menu {
+				width: 1200px;
+				height: 600px;
+				margin: 0 auto;
+				background-color: #F1F1F1;
+			}
+			.menu .daohang {
+				width: 190px;
+				height: 598px;
+				float: left;
+				background-color: #FF5400;
+			}
+			h3{
+				line-height: 38px;
+				margin-left: 5px;
+				color: white;
+			}
+			h3 a{
+				float: right;
+				margin-right: 5px;
+				color: white;
+			}
+			h3 a img {
+				width: 20px;
+				height: 20px;
+				margin-top: 10px;
+			}
+			.daohang {
+			    float: left;
+			    width: 190px;
+			    background-color: #FF6537;
+			    position: relative;
+			}
+			.daohanglist li {
+				width: 190px;
+			    background: url(img/jian.png) no-repeat right center;
+			}
+			.daohanglist li a {
+				color: white;
+				font-size: 16px;
+			}
+			.daohanglist_1 {
+			    display: none;
+			    position: absolute;
+			    left: 190px;
+			    top: 50px;
+			    width: 800px;
+			    height: 505px;
+			    border: 2px solid #FF6537;
+			    background-color: white;
+			}
+			.daohanglist li:hover .daohanglist_1 {
+				display: block;
+			}
+			.menu li{
+				text-align: center;
+				float: left;
+				height: 12px;
+				margin-top: 20px;
+				font-size: 16px;
+				color: #FF5400;
+				position: relative;
+			}
+			.menu .da a{
+				font-size: 18px;
+				color: #FF6537;
+				font-weight: bold;
+				margin-left: 20px;
+			}
+			.menu .shu{
+				color: #F1F1F1;
+				margin-left: 15px;
+				margin-right: 10px;
+			}
+			.menu a{
+				font-size: 15px;
+				color: black;
+				margin-left: 5px;
+			}
+			.zhong{
+				width: 690px;
+				height: 548px;
+				float: left;
+				border: 10px solid #F1F1F1;
+			}
+			.menu .you {
+				width: 300px;
+				height: 532px;
+				float: right;
+				margin-top: 35px;
+			}
+			.menu .you .shang{
+				width: 300px;
+				height: 315px;
+			}
+			.menu .you .shang .kuai1{
+				height: 170px;
+			}
+			.menu .you .shang .kuai1 img{
+				width: 300px;
+			}
+			.menu .you .shang .kuai2{
+				height: 35px;
+				background-color: #ffe4dd;
+			}
+			.kuai2 a {
+			    position: relative;
+			    padding-left: 82px;
+			    color: #f40;
+			    display: block;
+			    height: 32px;
+			    line-height: 32px;
+			    background: #ffe4dd;
+			    font-size: 12px;
+			}
+			.kuai2 span {
+			    position: absolute;
+			    right: 52px;
+			    top: 11px;
+			    line-height: 0;
+			    width: 0;
+			    height: 0;
+			    border-style: solid;
+			    margin-left: 32px;
+			    border-width: 6px 0 6px 8px;
+			    border-color: transparent transparent transparent #f40;
+			}
+			.menu .you .shang .kuai3{
+				height: 110px;
+				background-color: white;
+			}
+			.kuai3 .gg{
+			    position: relative;
+			    height: 24px;
+			    margin-bottom: 20px;
+			    margin-top: 4px;
+			}
+			.kuai3 .gg .select {
+				margin-top: 20px;
+			    border-bottom: 2px solid #F40;
+			}
+			.kuai3 .gg li {
+			    float: left;
+			    line-height: 8px;
+			    width: 39px;
+			    text-align: center;
+			    color: #000000;
+			    margin: 0 8px;
+			}
+			.kuai3 p a {
+				font-size: 12px;
+				line-height: 25px;
+				margin-left: 10px;
+				float: left;
+			}
+			.kuai3 p a:hover{
+				color: #FF4400;
+			}
+			.xia {
+				width: 300px;
+				height: 202px;
+				margin-top: 15px;
+				background-color: #F1F1F1;
+			}
+			.xia .kuai{
+				width: 70px;
+				height: 66px;
+				float: left;
+				border: 1px solid #F1F1F1;
+				text-align: center;
+				background-color: white;
+				margin: 0 auto;
+			}
+			.xia .kuai p{
+				height: 35px;
+				display: block;
+				margin-left: 25px;
+				margin-top: 15px;
+				background: url(img/图标.png) no-repeat 0 0;
+			}
+			.xia .kuai_1{
+				margin-top: 0px;
+			}
+			.xia .kuai a{
+				float: left;
+				font-size: 12px;
+				margin-left: 18px;
+				margin-top: -4px;
+				color: #999;
+			}
+			.xia .kuai p a:hover{
+				color: #FF5400;
+			}
+			.zui {
+				width: 1200px;
+				height: 130px;
+				margin: 0 auto;
+			}
+			#wu{
+	    	margin:0 auto;
+	    	width: 1190px;
+	    	height: 74px;
+	    	-background-color: forestgreen;
+	    	}
+		    #wu .wu1{
+		    	width: 179px;
+		    	height: 74px;
+		    	-background-color: salmon;
+		    	float: left;
+		    }
+		    #wu .wu1 .wu1zuo{
+		    	width: 65px;
+		    	height: 65px;
+		    	margin-left: 10px;
+		    	padding-top: 10px;
+		    	padding-left: 5px;
+		       -background-color: darkturquoise;
+		       float: left;
+		       
+		    }
+		    .wu1zuo img{
+		    margin-left: -8px;
+		    
+		    }
+		    
+		    #wu .wu1 .wu1you{
+		    	width: 75px;
+		    	height: 74px;
+		    	-background-color: brown;
+		    	float: right;
+		    	color: #9a745f;
+		    	margin-top: 10px;
+		    }
+		    .wu1you img{
+			   	margin-left: -25px;
+			   	float: left;
+		  	}
+
+			.dahe{
+				width: 1200px;
+				height: 500px;
+				margin: 0 auto;
+				background-color: gainsboro;
+			}
+			.chang{
+				width: 890px;
+				height: 1000px;
+				background-color: #F1F1F1;
+				text-align: center;
+			}
+			.chang .wo{
+				display: block;
+				height: 40px;
+				background: url(img/图标.png) no-repeat center -590px;
+			}
+			.chang a{
+			    border-radius: 10px;
+			    background: #fff;
+			    float: right;
+			    margin-right: 20px;
+			    margin-top: -20px;
+			    padding: 0 9px 0 14px;
+			    font-size: 14px;
+			}
+			.chang a:hover {
+			    background: #f40;
+			    color: #FFF;
+			}
+			.sige {
+				width: 1200px;
+				height: 800px;
+				background-color: #F1F1F1;
+				float: left;
+			}
+			.sige .ge{
+				width: 440px;
+				height: 360px;
+				float: left;
+				margin-top: 5px;
+				background-color: white;
+			}
+			.sige .gezuo{
+				width: 100px;
+				height: 360px;
+				float: left;
+			}
+			.gezuo img{
+				width: 100px;
+				height: 100px;
+				float: left;
+			}
+			.gezuo .zi{
+				width: 100px;
+				height: 260px;
+				margin-top: 100px;
+				background-color: #406CC0;
+			}
+			.gezuo strong {
+			    display: block;
+			    text-indent: 8px;
+			    color: #FFF;
+			    padding-top: 8px;
+			    font-size: 14px;
+			    margin-bottom: 20px;
+			}
+			.gezuo ul li{
+			   	height: 22px;
+			   	float: left;
+			}
+			.gezuo ul li a{
+			   	background: #6689CD;
+			   	color: white;
+			   	font-size: 12px;
+			   	margin-left: 5px;
+			}
+			.gezuo ul li a:hover{
+			   		color: red;
+			   		background-color: white;
+			   	}
+			.sige .geyou{
+				width: 339px;
+				height: 358px;
+				border: 1px solid lightblue;
+				border-left: 0px;
+				margin-left: 100px;
+			}
+			.sige :hover .geyou{
+				width: 339px;
+				height: 358px;
+				border: 1px solid #406cc0;
+				border-left: 0px;
+			}
+			.two{
+				height: 200px;
+				float: left;
+			}
+			.hao{
+				height: 100px;
+				margin-top: 20px;
+			}
+			.hao b{
+				font-size: 12px;
+				margin-left: 10px;
+				color: black;
+				float: left;
+			}
+			.hao b:hover{
+				color: #FF4400;
+			}
+			.hao img{
+				height: 55px;
+				margin-top: -10px;
+				float: right;
+			}
+			.shuma{
+				width: 180px;
+				height: 140px;
+				margin-top: -30px;
+				margin-left: 10px;
+				background-image: url(img/tu5.jpg);
+			}
+			.digital{
+			   		width: 180px;
+			   		height: 30px;
+			   		padding-top: 110px;
+			   		text-align: center;
+			   		height: 30px;
+		   			font-size: 12px;
+			   		float: left;
+			   		line-height: 30px;
+			}
+			.d-zuo{
+			   		width: 50px;
+			   		background: deepskyblue;
+			}
+		   	.d-you{
+		   		width: 130px;
+		   		background: #DCDCDC;
+		   		margin-left: 50px;
+		   		margin-top: -30px;
+		   	}
+		   	c:hover{
+		   		color: #FF5400;
+		   	}
+		   	.liang{
+		   		float: right;
+		   		margin-top: -140px;
+		   		width: 120px;
+		   		height: 64px;
+		   		margin-right: 10px;
+		   		background-image: url(img/tu6.jpg);
+		   	}
+		   	.liangg{
+		   		width: 120px;
+		   		height: 24px;
+		   		margin-top: 40px;
+		   	}
+		   	.l_xia {
+		   		width: 120px;
+		   		height: 24px;
+		   		font-size: 12px;
+		   		line-height: 24px;
+		   		background-color: #DCDCDC;
+		   	}
+		   	.liang_1{
+		   		margin-top: -65px;
+		   		background-image: url(img/tu7.jpg);
+		   	}
+
+
+		</style>
+	</head>
+	<body>
+		<div class="top">
+			<div class="zuo">
+				<ul>
+					<li class="dalu">中国大陆<img src="img/xia.png" />
+						<ul>
+							<li>全球</li>
+							<li>中国大陆</li>
+							<li>香港</li>
+							<li>台湾</li>
+							<li>澳门</li>
+							<li>韩国</li>
+							<li>马来西亚</li>
+							<li>澳大利亚</li>
+							<li>新加坡</li>
+							<li>新西兰</li>
+							<li>加拿大</li>
+							<li>美国</li>
+							<li>日本</li>
+						</ul>
+					</li>
+					<li><a href="#" style="color: #FF5400">亲，请登录</a></li>
+					<li><a href="#">免费注册</a></li>
+					<li><a href="#">手机逛淘宝</a></li>
+				</ul>
+			</div>
+			<div class="you">
+				<li class="wode"><a href="#">我的淘宝</a>
+					<ul>
+						<li>已买到宝贝</li>
+						<li>我的足迹</li>
+					</ul>
+				</li>
+				<li style="width: 20px;"><img src="img/xia.png" /></li>
+				<li><a href="#"><img src="img/shop.png" />&nbsp;购物车</a></li>
+				<li style="width: 20px;"><img src="img/xia.png" /></li>
+				<li class="wode"><img src="img/xing.png" /><a href="#">&nbsp;收藏夹</a>
+					<ul>
+						<li>收藏的宝贝</li>
+						<li>收藏的店铺</li>
+					</ul>
+				</li>
+				<li style="width: 20px;"><img src="img/xia.png" /></li>
+				<li><a href="#">商品分类</a></li>
+				<li class="wode"><a href="#">卖家中心</a>
+					<ul>
+						<li>免费开店</li>
+						<li>已卖出宝贝</li>
+						<li>出售中宝贝</li>
+						<li>卖家服务</li>
+						<li>卖家培训</li>
+						<li>体检中心</li>
+						<li>问商友</li>
+					</ul>	
+				</li>
+				<li style="width: 20px;"><img src="img/xia.png" /></li>
+				<li class="wode"><a href="#">联系客服</a>
+					<ul>
+						<li>消费者客服</li>
+						<li>卖家客服</li>
+					</ul>
+				</li>
+				<li style="width: 20px;"><img src="img/xia.png" /></li>
+				<li style="width: 80px;" ><a href="#"><img src="img/gang.png" />&nbsp;网站导航</a></li>
+				<li style="width: 20px;"><img src="img/xia.png" /></li>
+			</div>	
+		</div>
+		
+		<div class="tu">
+			<img src="img/zhibo.png" style="margin-left: 80px"/>
+		</div>
+		
+		<div class="sosuo">
+			<div class="gif">
+				<img src="img/zaowu.gif" style="float: left;"/>
+			</div>
+			<ul>
+				<li>
+					<div class="zi" style="width: 50px; height: 25px; margin-left: 5px; background-color: #FF5400;">
+						<a href="#" style="color: white; font-weight: bolder;">宝贝</a>
+					</div></li>
+				<li>天猫</li>
+				<li>店铺</li>
+			</ul>
+			<div class="kuang">
+				<input type="text" style="width: 500px; height: 35px; border: solid 4px #FF5400; vertical-align: middle; background:url(img/so.jpg) no-repeat 10px 10px; text-indent: 10px;" placeholder="     二次元高能好物" />
+				<input type="button" value="搜素" style="width: 120px; height: 43px; background-color: #FF5400; color: white; font-size: 18px; margin-left: -5px; border: solid 1px #FF5400; vertical-align: middle;" />
+			</div>
+			<div class="ma">
+				<img src="img/erweima.png"/>
+			</div>
+			<div class="remen">
+				<p style="margin-top: 8px;">
+					<a href="#">新款连衣裙</a>
+					<a href="#">四件套</a>
+					<a href="#">潮流T恤</a>
+					<a href="#">时尚女鞋</a>
+					<a href="#">短裤</a>
+					<a href="#">半身裙</a>
+					<a href="#">男士外套</a>
+					<a href="#">墙纸</a>
+					<a href="#">行车记录仪</a>
+					<a href="#">新款男鞋</a> 
+					<a href="#">耳机</a>
+					<a href="#" style="float: right;">更多<</a>
+				</p>
+			</div>
+		</div>
+		
+		<div class="menu">
+			<div class="daohang">
+				<h3>主题市场<a href="#"><img src="img/caidan.png"/></a></h3>
+				<ul class="daohanglist">
+					<li>
+						<a href="#">女装 / 男装 / 内衣</a>
+						<div class="daohanglist_1">
+							adsadasdas
+						</div>
+					</li>
+					<li>
+						<a href="#">鞋靴 / 箱包 / 配件</a>
+						<div class="daohanglist_1">
+							adsadasdas
+						</div>
+					</li>
+					<li>
+						<a href="#">童装玩具 / 孕产 / 用品</a>
+						<div class="daohanglist_1">
+							adsadasdas
+						</div>
+					</li>
+					<li>
+						<a href="#">家电 / 数码 / 手机</a>
+						<div class="daohanglist_1">
+							adsadasdas
+						</div>
+					</li>
+					<li>
+						<a href="#">美妆 / 洗护 / 保健品</a>
+						<div class="daohanglist_1">
+							adsadasdas
+						</div>
+					</li>
+					<li>
+						<a href="#">珠宝 / 眼镜 / 手表</a>
+						<div class="daohanglist_1">
+							adsadasdas
+						</div>
+					</li>
+					<li>
+						<a href="#">运动 / 户外 / 乐器</a>
+						<div class="daohanglist_1">
+							adsadasdas
+						</div>
+					</li>
+					<li>
+						<a href="#">游戏 / 动漫 / 影视</a>
+						<div class="daohanglist_1">
+							adsadasdas
+						</div>
+					</li>
+					<li>
+						<a href="#">美食 / 生鲜 / 零食</a>
+						<div class="daohanglist_1">
+							adsadasdas
+						</div>
+					</li>
+					<li>
+						<a href="#">鲜花 / 宠物 / 农资</a>
+						<div class="daohanglist_1">
+							adsadasdas
+						</div>
+					</li>
+					<li>
+						<a href="#">房产 / 装修 / 建材</a>
+						<div class="daohanglist_1">
+							adsadasdas
+						</div>
+					</li>
+					<li>
+						<a href="#">家具 / 家饰 / 家纺</a>
+						<div class="daohanglist_1">
+							adsadasdas
+						</div>
+					</li>
+					<li>
+						<a href="#">汽车 / 二手车 / 用品</a>
+						<div class="daohanglist_1">
+							adsadasdas
+						</div>
+					</li>
+					<li>
+						<a href="#">办公 / DIY / 五金电子</a>
+						<div class="daohanglist_1">
+							adsadasdas
+						</div>
+					</li>
+					<li>
+						<a href="#">百货 / 餐厨 / 家庭保健</a>
+						<div class="daohanglist_1">
+							adsadasdas
+						</div>
+					</li>
+					<li>
+						<a href="#">学习 / 卡券 / 本地服务</a>
+						<div class="daohanglist_1">
+							adsadasdas
+						</div>
+					</li>
+				</ul>
+				<img src="img/tiyan.png" style="margin-top: 8px;"/>
+			</div>
+			<ul>
+				<li class="da"><a href="#">天猫</a></li>
+				<li class="da"><a href="#">聚划算</a></li>
+				<li class="da"><a href="#">天猫超市</a></li>
+				<li class="shu">|</li>
+				<li><a href="#">淘抢购</a></li>
+				<li><a href="#">电器城</a></li>
+				<li><a href="#">司法拍卖</a></li>
+				<li><a href="#">中国质造</a></li>
+				<li><a href="#">特色中国</a></li>
+				<li class="shu">|</li>
+				<li><a href="#">飞猪旅行</a></li>
+				<li><a href="#">智能生活</a></li>
+				<li><a href="#">苏宁易购</a></li>
+			</ul>
+			<div class="zhong">
+				<img src="img/mianmo.jpg" style="margin-top: 25px; margin-right: 10px; float: left;"/>
+				<img src="img/dacu.png" style="margin-top: 25px"/>
+				<img src="img/mao.png" style="margin-top: 25px; margin-right: 6px;"/>
+				<img src="img/xin.png"/>
+			</div>
+			<div class="you">
+				<div class="shang">
+					<div class="kuai1">
+						<img src="img/toubu.png"/>
+					</div>
+					<div class="kuai2">
+						<a href="#">网上有害信息举报专区<span></span></a>
+					</div>
+					<div class="kuai3">
+						<ul class="gg">
+							<li class="select">公告</li>
+							<li class="select">规则</li>
+							<li class="select">论坛</li>
+							<li class="select">安全</li>
+							<li class="select">公益</li>
+						</ul>
+						<p><a href="#">阿里CEO张勇:淘宝创造新物种 造物节引领新时代</a></p>
+						<p><a href="#">网商大会时隔五年重启</a></p>
+						<p><a href="#">百万粉丝大V登陆造物节</a></p>
+					</div>
+				</div>
+				<div class="xia">
+					<div class="kuai kuai_1">
+						<p></p>
+						<a href="#">充话费</a>
+					</div>
+					<div class="kuai kuai_1">
+						<p style="background-position-y: -44px;"></p>
+						<a href="#">&nbsp;&nbsp;游戏</a>
+					</div>
+					<div class="kuai kuai_1">
+						<p style="background-position-y: -86px;"></p><a href="#">&nbsp;&nbsp;旅行</a>
+					</div>
+					<div class="kuai kuai_1">
+						<p style="background-position-y: -130px;"></p><a href="#">&nbsp;&nbsp;车险</a>
+					</div>
+					<div class="kuai">
+						<p style="background-position-y: -174px;"></p><a href="#">&nbsp;&nbsp;彩票</a>
+					</div>
+					<div class="kuai">
+						<p style="background-position-y: -218px;"></p><a href="#">&nbsp;&nbsp;电影</a>
+					</div>
+					<div class="kuai">
+						<p style="background-position-y: -263px;"></p><a href="#">&nbsp;&nbsp;酒店</a>
+					</div>
+					<div class="kuai">
+						<p style="background-position-y: -305px;"></p><a href="#">&nbsp;&nbsp;理财</a>
+					</div>
+					<div class="kuai">
+						<p style="background-position-y: -350px;"></p><a href="#">找服务</a>
+					</div>
+					<div class="kuai">
+						<p style="background-position-y: -395px;"></p><a href="#">&nbsp;&nbsp;音乐</a>
+					</div>
+					<div class="kuai">
+						<p style="background-position-y: -440px;"></p><a href="#">水电煤</a>
+					</div>
+					<div class="kuai">
+						<p style="background-position-y: -485px;"></p><a href="#">火车票</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="zui">
+			<div id="wu">
+	  			<div class="wu1">
+	  				<div class="wu1zuo"><a href="#"><img src="img/1.png"/></a></div>
+		  		  	<div class="wu1you">
+			  		  	<strong>理想家<>
+			  		    <p class="xiang"style="font-size: 5px;margin-left: -5px;line-height: -5px;">想要这个家</p>
+			  		    <img src="img/10.png"/>
+			  		</div>
+	  		  	</div>
+	  			<div class="wu1">
+	  				<div class="wu1zuo"><a href="#"><img src="img/1.png"/></a></div>
+		  		  	<div class="wu1you">
+			  		  	<strong>理想家<>
+			  		    <p class="xiang"style="font-size: 5px;margin-left: -5px;line-height: -5px;">想要这个家</p>
+			  		    <img src="img/10.png"/>
+			  		</div>
+	  		  	</div>
+	  		  	<div class="wu1">
+	  				<div class="wu1zuo"><a href="#"><img src="img/1.png"/></a></div>
+		  		  	<div class="wu1you">
+			  		  	<strong>理想家<>
+			  		    <p class="xiang"style="font-size: 5px;margin-left: -5px;line-height: -5px;">想要这个家</p>
+			  		    <img src="img/10.png"/>
+			  		</div>
+	  		  	</div>
+	  		  	<div class="wu1">
+	  				<div class="wu1zuo"><a href="#"><img src="img/1.png"/></a></div>
+		  		  	<div class="wu1you">
+			  		  	<strong>理想家<>
+			  		    <p class="xiang"style="font-size: 5px;margin-left: -5px;line-height: -5px;">想要这个家</p>
+			  		    <img src="img/10.png"/>
+			  		</div>
+	  		  	</div>
+	  		  	<div class="wu1">
+	  				<div class="wu1zuo"><a href="#"><img src="img/1.png"/></a></div>
+		  		  	<div class="wu1you">
+			  		  	<strong>理想家<>
+			  		    <p class="xiang"style="font-size: 5px;margin-left: -5px;line-height: -5px;">想要这个家</p>
+			  		    <img src="img/10.png"/>
+			  		</div>
+	  		  	</div>
+	  		  	<img src="img/er.png"/>
+	  		 </div> 
+	  	</div>
+			
+		</div>
+		<div class="dahe">
+			<div class="chang">
+				<span class="wo"></span>
+				<a href="#">更多&gt;</a>
+				<div class="sige">
+					<div class="ge 1">
+						<div class="gezuo">
+							<img src="img/ge1.jpg"/>
+							<div class="zi">
+								<strong>热门TOP</strong>
+								<ul>
+									<li><a href="#">iPhone7</a></li>
+									<li><a href="#">S8</a></li>
+									<li><a href="#">游戏鼠标</a></li>
+									<li><a href="#">机械键盘</a></li>
+									<li><a href="#">单反相机</a></li>
+									<li><a href="#">AppleWatch</a></li>
+									<li><a href="#">DIY主机</a></li>
+									<li><a href="#">智能机器</a></li>
+									<li><a href="#">制氧机</a></li>
+									<li><a href="#">榨汁机</a></li>
+								</ul>
+								
+							</div>
+							
+						</div>
+						<div class="geyou">
+							<div class="two">
+								<img src="img/tu1.jpg"/>
+								<img src="img/tu2.jpg"/>
+							</div>
+							<div class="hao">
+								<b>数码好货</b><br /><b style="font-weight: normal;">等你来看</b>
+								<img src="img/tu3.jpg"/>
+							</div>
+							<div class="hao">
+								<b>品质家电</b><br /><b style="font-weight: normal;">生活精选</b>
+								<img src="img/tu4.jpg"/>
+							</div>
+							<div class="shuma">
+								<div class="digital">
+									<div class="d-zuo"><c style="color: white;">数码</c></div>
+									<div class="d-you"><c>品质好货优选</c></div>
+								</div>
+							</div>
+							<div class="liang">
+								<div class="liangg">
+									<div class="l_xia"><c>品质好货优选</c></div>
+								</div>
+							</div>
+							<div class="liang liang_1">
+								<div class="liangg">
+									<div class="l_xia"><c>品质好货优选</c></div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="ge 2" style="margin-left: 10px;">
+						<div class="gezuo">
+							<img src="img/ge1.jpg"/>
+							<div class="zi">
+								<strong>热门TOP</strong>
+								<ul>
+									<li><a href="#">iPhone7</a></li>
+									<li><a href="#">S8</a></li>
+									<li><a href="#">游戏鼠标</a></li>
+									<li><a href="#">机械键盘</a></li>
+									<li><a href="#">单反相机</a></li>
+									<li><a href="#">AppleWatch</a></li>
+									<li><a href="#">DIY主机</a></li>
+									<li><a href="#">智能机器</a></li>
+									<li><a href="#">制氧机</a></li>
+									<li><a href="#">榨汁机</a></li>
+								</ul>
+								
+							</div>
+							
+						</div>
+						<div class="geyou">
+							<div class="two">
+								<img src="img/tu1.jpg"/>
+								<img src="img/tu2.jpg"/>
+							</div>
+							<div class="hao">
+								<b>数码好货</b><br /><b style="font-weight: normal;">等你来看</b>
+								<img src="img/tu3.jpg"/>
+							</div>
+							<div class="hao">
+								<b>品质家电</b><br /><b style="font-weight: normal;">生活精选</b>
+								<img src="img/tu4.jpg"/>
+							</div>
+							<div class="shuma">
+								<div class="digital">
+									<div class="d-zuo"><c style="color: white;">数码</c></div>
+									<div class="d-you"><c>品质好货优选</c></div>
+								</div>
+							</div>
+							<div class="liang">
+								<div class="liangg">
+									<div class="l_xia"><c>品质好货优选</c></div>
+								</div>
+							</div>
+							<div class="liang liang_1">
+								<div class="liangg">
+									<div class="l_xia"><c>品质好货优选</c></div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="ge 3" style="margin-top: 10px;">
+						<div class="gezuo">
+							<img src="img/ge1.jpg"/>
+							<div class="zi">
+								<strong>热门TOP</strong>
+								<ul>
+									<li><a href="#">iPhone7</a></li>
+									<li><a href="#">S8</a></li>
+									<li><a href="#">游戏鼠标</a></li>
+									<li><a href="#">机械键盘</a></li>
+									<li><a href="#">单反相机</a></li>
+									<li><a href="#">AppleWatch</a></li>
+									<li><a href="#">DIY主机</a></li>
+									<li><a href="#">智能机器</a></li>
+									<li><a href="#">制氧机</a></li>
+									<li><a href="#">榨汁机</a></li>
+								</ul>
+								
+							</div>
+							
+						</div>
+						<div class="geyou">
+							<div class="two">
+								<img src="img/tu1.jpg"/>
+								<img src="img/tu2.jpg"/>
+							</div>
+							<div class="hao">
+								<b>数码好货</b><br /><b style="font-weight: normal;">等你来看</b>
+								<img src="img/tu3.jpg"/>
+							</div>
+							<div class="hao">
+								<b>品质家电</b><br /><b style="font-weight: normal;">生活精选</b>
+								<img src="img/tu4.jpg"/>
+							</div>
+							<div class="shuma">
+								<div class="digital">
+									<div class="d-zuo"><c style="color: white;">数码</c></div>
+									<div class="d-you"><c>品质好货优选</c></div>
+								</div>
+							</div>
+							<div class="liang">
+								<div class="liangg">
+									<div class="l_xia"><c>品质好货优选</c></div>
+								</div>
+							</div>
+							<div class="liang liang_1">
+								<div class="liangg">
+									<div class="l_xia"><c>品质好货优选</c></div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="ge 4" style="margin-top: 10px;margin-left: 10px;">
+						<div class="gezuo">
+							<img src="img/ge1.jpg"/>
+							<div class="zi">
+								<strong>热门TOP</strong>
+								<ul>
+									<li><a href="#">iPhone7</a></li>
+									<li><a href="#">S8</a></li>
+									<li><a href="#">游戏鼠标</a></li>
+									<li><a href="#">机械键盘</a></li>
+									<li><a href="#">单反相机</a></li>
+									<li><a href="#">AppleWatch</a></li>
+									<li><a href="#">DIY主机</a></li>
+									<li><a href="#">智能机器</a></li>
+									<li><a href="#">制氧机</a></li>
+									<li><a href="#">榨汁机</a></li>
+								</ul>
+								
+							</div>
+							
+						</div>
+						<div class="geyou">
+							<div class="two">
+								<img src="img/tu1.jpg"/>
+								<img src="img/tu2.jpg"/>
+							</div>
+							<div class="hao">
+								<b>数码好货</b><br /><b style="font-weight: normal;">等你来看</b>
+								<img src="img/tu3.jpg"/>
+							</div>
+							<div class="hao">
+								<b>品质家电</b><br /><b style="font-weight: normal;">生活精选</b>
+								<img src="img/tu4.jpg"/>
+							</div>
+							<div class="shuma">
+								<div class="digital">
+									<div class="d-zuo"><c style="color: white;">数码</c></div>
+									<div class="d-you"><c>品质好货优选</c></div>
+								</div>
+							</div>
+							<div class="liang">
+								<div class="liangg">
+									<div class="l_xia"><c>品质好货优选</c></div>
+								</div>
+							</div>
+							<div class="liang liang_1">
+								<div class="liangg">
+									<div class="l_xia"><c>品质好货优选</c></div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+				
+	</body>
+</html>

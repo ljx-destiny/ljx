@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#da{
+				float: left;
+			}
+			#xiao{
+				float: left;
+				width: 590px;
+				position: relative;
+			}
+			#xiao ul{
+				list-style: none;
+			}
+			#xiao .a{
+				width: 300px;
+			    height: 30px;
+			    margin-top: 50px;
+			    margin-left: 50px;
+			}
+			#xiao li{
+				width: 50px;
+				height: 30px;
+				float: left;
+			}
+		
+		</style>
+	</head>
+	<body>
+		<div id="da">
+			<div id="xiao">
+				<div id="q">
+					<ul>
+						<li id="btn">公告</li>
+						<li id="guize">规则</li>
+						<li id="luntan">论坛</li>
+						<li id="anquan">安全</li>
+						<li id="gongyi">公益</li>
+					</ul>
+				</div>
+
+				<div id="ali" class="a" style="display: none;">
+					<h5>阿里CEO张勇:淘宝创造新物种 造物节引领新时代</h5>
+					<h5>网商大会时隔五年重启 百万粉丝大V登陆造物节</h5>
+				</div>
+				<div id="lvyou" class="a" style="display: none;">
+					<h5>旅游市场管理规范变更新增淘宝金币通用规范</h5> 
+					<h5>新增二手数码行业标准淘宝认证相关规则变更</h5>
+				</div>
+				<div id="san" class="a" style="display: none;">
+					<h5>生意参谋3.0正式上线商家内容成长全攻略</h5> 
+					<h5>粉丝运营新工具！十八纸颠覆家具想象</h5>
+				</div>
+				<div id="si" class="a" style="display: none;">
+					<h5>全国首例刷单炒信案被判刑五年九个月！</h5> 
+					<h5>你遇过职业举报人吗卖家易忽略诈骗手段</h5>
+				</div>
+				<div id="wu" class="a" style="display: none;">
+					<h5>跑赢房价的商家爱心致百万商家的感谢信</h5> 
+					<h5>闲鱼公益上线招募NGO公益宝贝卖家发票索取</h5>
+				</div>
+			</div>
+		</div>
+		
+	<script>
+		var	btn = document.getElementById('btn');
+		var ali = document.getElementById('ali');
+		btn.onclick=function(){
+			if(ali.style.display=='none'){
+				ali.style.display='block'
+				lvyou.style.display='none'
+				san.style.display='none'
+				si.style.display='none'
+				wu.style.display='none'
+			}else{
+				ali.style.display='none'
+			}
+		}
+		
+		var	guize = document.getElementById('guize');
+		var lvyou = document.getElementById('lvyou');
+		guize.onclick=function(){
+			if(lvyou.style.display=='none'){
+				lvyou.style.display='block'
+				ali.style.display='none'
+				san.style.display='none'
+				si.style.display='none'
+				wu.style.display='none'
+			}else{
+				lvyou.style.display='none'}
+		}
+		
+		var	luntan = document.getElementById('luntan');
+		var san = document.getElementById('san');
+		luntan.onclick=function(){
+			if(san.style.display=='none'){
+				san.style.display='block'
+				ali.style.display='none'
+				lvyou.style.display='none'
+				si.style.display='none'
+				wu.style.display='none'
+			}else{
+				san.style.display='none'}
+		}
+		
+		var	anquan = document.getElementById('anquan');
+		var si = document.getElementById('si');
+		anquan.onclick=function(){
+			if(si.style.display=='none'){
+				si.style.display='block'
+				ali.style.display='none'
+				san.style.display='none'
+				lvyou.style.display='none'
+				wu.style.display='none'
+			}else{
+				si.style.display='none'}
+		}
+		
+		var	gongyi = document.getElementById('gongyi');
+		var wu = document.getElementById('wu');
+		gongyi.onclick=function(){
+			if(wu.style.display=='none'){
+				wu.style.display='block'
+				ali.style.display='none'
+				san.style.display='none'
+				si.style.display='none'
+				lvyou.style.display='none'
+			}else{
+				wu.style.display='none'}
+		}
+		  
+	</script>  
+	</body>
+<ml>

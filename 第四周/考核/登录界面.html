@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form id="form">
+			账号：<input type="text" placeholder="请输入账户" id="user"/><br />
+			密码：<input type="password" placeholder="请输入密码" id="password"/><br />
+			重复密码：<input type="password" placeholder="请再一次输入密码" id="password1"/><br />
+			<input type="submit" id="tijiao" value="提交" />
+		</form>
+		
+		<script type="text/javascript">
+			var form = document.getElementById("form");
+			var user = document.getElementById("user");
+			var mima = document.getElementById("password");
+			var mima1 = document.getElementById("password1");
+			var tijiao = document.getElementById("tijiao");
+			
+			tijiao.onclick = function(){
+				if (user.value=="admin" && mima.value=="123" && mima1.value=="123") {
+					form.action="index.html";
+				}else if (user.value==""){
+					alert("账户不能为空");
+				}else if (mima.value==""){
+					alert("密码不能为空");
+				}else if (mima1.value==""){
+					alert("重复密码不能为空");
+				}else if (user.value!="" && user.value!="admin"){
+					alert("用户名输入有误");
+				}else if (mima.value!="" && mima.value!="123"){
+					alert("密码输入有误");
+				}else if (mima1.value!="" && mima1.value!="123"){
+					alert("两次密码输入不一致");
+				}
+			}
+		</script>
+	</body>
+</html>

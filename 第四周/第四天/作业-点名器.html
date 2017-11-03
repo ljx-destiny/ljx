@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#da{
+				width: 350px;
+				height: 350px;
+				margin: 0 auto;
+				margin-top: 100px;
+				background: url(../img/xiao.jpg) no-repeat;
+				border: 1px solid #000;
+				position: relative;
+			}
+			#name{
+				position: absolute;
+				width: 80px;
+				height: 30px;
+				text-align: center;
+				border: 1px solid #87CEEB;
+				top: 145px;
+				left: 140px;
+				font-size: 20px;
+				opacity: 0.5;
+			}
+			#start{
+				position: absolute;
+				width: 60px;
+				height: 30px;
+				top: 280px;
+				left: 145px;
+				font-size: 14px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="da">
+			<div id="name"></div>
+			<input type="button" id="start" value="开始点名" />
+		</div>
+		
+		<script type="text/javascript">
+			window.onload = function(){
+				var name = document.getElementById("name");
+				var start = document.getElementById("start");
+				
+				
+				function getRandom(n){
+					var a=Math.floor(Math.random()*n);
+					return a; 
+				}
+				start.onclick = function(){
+					var classmate=["李佳新","宋岩","黄英云","郭勉","刘嘉伟","李超",
+					"全垚","路畅","马嘉诚","卜晓洋","薛宇峰","刘新红","畅一晓","范子龙",
+					"高世飞","寇佳萌","李继鹏","王佳玉","杨瀚翔","张明","张毅","李增瑞"];
+
+					var str=getRandom(classmate.length);
+					name.innerHTML=classmate[str];
+					console.log(name.innerHTML);
+				}
+			}
+			
+			
+		</script>
+	</body>
+</html>

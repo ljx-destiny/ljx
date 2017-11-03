@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				background-color: orange;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		
+		<script type="text/javascript">
+			
+			var oDiv = document.getElementsByTagName("div")[0];
+			
+			oDiv["onclick"]=function(event){
+				//事件类型，“click”
+				console.log(event.type);
+				
+				//事件的触发元素	<div></div>
+				console.log(event.target);
+			}
+		</script>
+	</body>
+</html>

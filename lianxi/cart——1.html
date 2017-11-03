@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			h1{
+				margin-left: 50px;
+				margin-top: 20px;
+				color: aquamarine;
+			}
+			.information{
+				width: 1260px;
+				height: 50px;
+				margin: 0 auto;
+				margin-top: 20px;
+				line-height: 50px;
+				border: 1px solid #D2D3D4;
+			}
+			.information p{
+				float: left;
+				font-size: 18px;
+				margin-left: 100px;
+				color: #D2D3D4;
+			}
+			.information .all{
+				margin-left: 0px;
+			}
+			.information .unit-price{
+				margin-left: 400px;
+			}
+			.information input{
+				width: 15px;
+				height: 15px;
+				margin-right: 10px;
+				margin-left: 10px;
+			}
+			.commodity{
+				width: 1260px;
+				height: 150px;
+				margin: 0 auto;
+				margin-top: 50px;
+				line-height: 150px;
+				border: 1px solid #D2D3D4;
+			}
+			.commodity input{
+				width: 15px;
+				height: 15px;
+				margin-left: 10px;
+			}
+			.settlement{
+				width: 1260px;
+				height: 50px;
+				margin: 0 auto;
+				margin-top: 150px;
+				line-height: 50px;
+				border: 1px solid #D2D3D4;
+			}
+			.settlement p{
+				float: left;
+				margin-left: 10px;
+			}
+			.settlement .selected{
+				font-size: 18px;
+				float: left;
+				margin-left: 780px;
+			}
+			.settlement span{
+				color: #E31436;
+				margin: 0px 5px;
+				font-style: italic;
+			}
+			.settlement button{
+				width: 100px;
+				height: 50px;
+				background: #E31436;
+				color: white;
+				float: right;
+				border: none;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>我的购物车</h1>
+		<div class="information">
+			<p class="all"><input type="checkbox" name="all" id="all" value="全选" />全选</p>
+			<p>商品信息</p>
+			<p class="unit-price">单价（元）</p>
+			<p>数量</p>
+			<p>金额（元）</p>
+			<p>操作</p>
+		</div>
+		<div class="commodity">
+			<input type="checkbox" name="commodity" id="commodity" value="商品" />
+		</div>
+		<div class="settlement">
+			<p>选择删除</p>
+			<p class="selected">已选商品<span> 0 </span>总价(不含邮费):</p>
+			<span>￥0</span>
+			<button>去结算</button>
+		</div>
+		
+	</body>
+</html>

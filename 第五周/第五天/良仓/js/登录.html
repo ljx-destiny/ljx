@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			body {
+				background: pink;
+			}
+			
+			.da {
+				width: 300px;
+				height: 500px;
+				margin: 80px auto;
+				background: palegreen;
+			}
+			
+			.username {
+				width: 200px;
+				height: 30px;
+				margin-top: 60px;
+				text-indent: 3em;
+				border: none;
+				border-bottom: 1.5px solid #000000;
+				background: none;
+				outline: none;
+				background: url(img/usericon.png)no-repeat;
+			}
+			
+			img {
+				width: 130px;
+				height: 150px;
+				margin-left: 70px;
+			}
+			
+			.pass {
+				width: 200px;
+				height: 30px;
+				margin-top: 20px;
+				text-indent: 3em;
+				margin-left: 15px;
+				border: none;
+				border-bottom: 1.5px solid #000000;
+				background: none;
+				outline: none;
+				background: url(img/passicon.png) no-repeat;
+			}
+			
+			.logbtn {
+				width: 300px;
+				height: 40px;
+				outline: none;
+				margin-top: 50px;
+				font-size: 18px;
+				color: white;
+				background: #333;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="da">
+			<img src="img/nlicon.png" />
+			<p>用户名:<input type="text" id="username" class="username" placeholder="请输入已有的用户" /></p>
+			密码:<input type="text" id="pass" class="pass" placeholder="请输入对应的密码" /><br />
+			<input type="button" id="logbtn" class="logbtn" value="登录" />
+		</div>
+	</body>
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var logbtn = document.getElementById("logbtn");
+		logbtn.onclick = function() {
+			var userval = document.getElementById("username").value;
+			var passval = document.getElementById("pass").value;
+
+			$.ajax({
+				type: "post",
+				url: "http://h6.duchengjiu.top/shop/api_user.php 
+
+",
+				async: true,
+				"data": {
+					"status": "login",
+					"username": userval,
+					"password": passval
+				},
+				"success": function(res) {
+					console.log(res);
+					if (res.code == 0) {
+						alert("登录成功");
+						window.location.href = "homepage.html";
+					} else {
+					//alert(res.message);
+						alert("请正确输入用户名和密码");
+
+					}
+				}
+			});
+		}
+	</script>
+
+</html>
+

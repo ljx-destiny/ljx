@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box2 {
+				width: 988px;
+				height: 529px;
+				background-color: chartreuse;
+				margin: 0 auto;
+			}
+			
+			.focus {
+				width: 355px;
+				height: 531px;
+				/*background-color: darkgreen;*/
+				float: left;
+			}
+			
+			.focus1 {
+				width: 355px;
+				height: 177px;
+				/*background-color: #6A5ACD;*/
+			}
+			
+			.wenzi {
+				color: red;
+				cursor: pointer;
+				text-align: center;
+				font-weight: bold;
+				margin-top: 10px;
+			}
+			
+			ul li {
+				line-height: 25px;
+				font-size: 13px;
+			}
+			
+			ul li:hover {
+				cursor: pointer;
+				color: red;
+				text-decoration: underline;
+			}
+			
+			.carousel {
+				width: 580px;
+				height: 270px;
+				background-color: thistle;
+				float: left;
+				margin-top: 10px;
+				margin-left: 40px;
+				position: relative;
+				overflow: hidden;
+			}
+			.carousel img{
+				width: 580px;
+				height: 270px;
+				top: 0px;
+			    position: absolute;
+			    left: 0;
+			}
+			
+			.carousel ul {
+				list-style: none;
+			}
+			
+			.carousel ul li {
+				display: none;
+			}
+			
+			.carousel ul li.current {
+				display: block;
+			}
+			
+			
+			
+		.carousel span {
+				position: absolute;
+				width: 55px;
+				height: 55px;
+				top: 130px;
+				cursor: pointer;
+			}
+			
+			.carousel .leftBtn {
+				left: 10px;
+				top: 100px;
+				background-image: url(img/slide-btnL.png);
+			}
+			
+			.carousel .rightBtn {
+				right: 10px;
+				top: 100px;
+				background-image: url(img/slide-btnR.png);
+			}
+			
+			.carousel .circles {
+				position: absolute;
+				bottom: 0px;
+				width: 200px;
+				right: 8px;
+				margin-left: -50px;
+				
+				
+			}
+			
+			.circles ol {
+				list-style: none;
+			}
+			
+			.circles ol li {
+				float: left;
+				width: 15px;
+				height: 15px;
+				margin-right: 13px;
+				background-color: white;
+				border-radius: 50%;
+				cursor: pointer;
+				
+			}
+			
+			.circles ol li.current {
+				background-color: white;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="box2">
+
+			<div class="focus">
+				<div class="focus1">
+					<p class="wenzi">焦点 大乐透第17090期预测：末位振幅走大</p>
+					<ul>
+						<li>福彩3D第17209期预测：大区和值补位</li>
+						<li>双色球第17091期预测：前区绝杀一红27</li>
+						<li>排列三第17209期预测：个位出号下滑</li>
+						<li>福彩3D第17208期预测：主看中区和值</li>
+					</ul>
+				</div>
+				<div class="focus1">
+					<p class="wenzi">焦点 大乐透第17090期预测：末位振幅走大</p>
+					<ul>
+						<li>福彩3D第17209期预测：大区和值补位</li>
+						<li>双色球第17091期预测：前区绝杀一红27</li>
+						<li>排列三第17209期预测：个位出号下滑</li>
+						<li>福彩3D第17208期预测：主看中区和值</li>
+					</ul>
+				</div>
+				<div class="focus1">
+					<p class="wenzi">焦点 大乐透第17090期预测：末位振幅走大</p>
+					<ul>
+						<li>福彩3D第17209期预测：大区和值补位</li>
+						<li>双色球第17091期预测：前区绝杀一红27</li>
+						<li>排列三第17209期预测：个位出号下滑</li>
+						<li>福彩3D第17208期预测：主看中区和值</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="carousel">
+				<ul id="aUl">
+					<li class="current">
+						<a href="#">
+							<img src="img/lun1.jpg" alt="" />
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/lun2.jpg" alt="" />
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/lun3.jpg" alt="" />
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/lun4.jpg" alt="" />
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/lun5.jpg" alt="" />
+						</a>
+					</li>
+				</ul>
+           
+			<div class="btns">
+				<span class="leftBtn" id="leftBtn"></span>
+				<span class="rightBtn" id="rightBtn"></span>
+			</div>
+
+			<div class="circles" id="circles">
+				<ol>
+					<li class="current"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ol>
+			</div>
+			
+			
+ </div>
+		
+
+		<script type="text/javascript">
+			
+		var leftBtn = document.getElementById("leftBtn");
+			var rightBtn = document.getElementById("rightBtn");
+			var aUl = document.getElementById("aUl");
+			var aLis = aUl.getElementsByTagName("li");
+            var circlesLis = document.getElementById("circles").getElementsByTagName("li");
+			//信号量
+			var img_idx = 0; //取值范围 0,1,2,3,4
+
+			//自动播放
+			setInterval(function() {
+				img_idx++;
+				if (img_idx > 4) {
+					img_idx = 0;
+				}
+				//调用函数
+				chengPic();
+			}, 1000);
+			leftBtn.onclick = function() {
+				img_idx--;
+				if (img_idx < 0) {
+					img_idx = 4;
+				}
+
+				//调用函数
+				chengPic();
+			}
+			rightBtn.onclick = function() {
+				img_idx++;
+				if (img_idx > 4) {
+					img_idx = 0;
+				}
+
+				//调用函数
+				chengPic();
+			}
+             
+             
+              //小圆点的监听，要批量添加
+             //方法1 IIFE
+             for(var i = 0;i<circlesLis.length;i++){
+          (function(a){
+
+              //监听
+               circlesLis[a].onmouseover = function(){
+
+                  img_idx = a;
+
+                   //调用业务函数
+                   chengPic();  //这个函数帮你换图，帮你换小圆点是橙色还是紫色
+               }
+
+           })(i);
+                  }
+			//业务函数
+			function chengPic() {
+
+				//去掉所有li的current类名
+				for (var i = 0; i < aLis.length; i++) {
+					aLis[i].className = "";
+				}
+
+				//把当前信号量的图片li加上current类名
+				aLis[img_idx].className = "current";
+
+			}
+			
+		</script>
+	</body>
+
+</html>

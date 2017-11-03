@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">	
+		.oDiv{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			position: absolute;
+			top: 100px;
+			left: 100px;
+		}
+		</style>
+	</head>
+	<body>
+		<!--<script type="text/javascript">
+			function fun(){
+				console.log( arguments[2] );//5
+				console.log( arguments[3] );//60
+				console.log( arguments.length );//6
+				var sum = 0;
+				for (var i = 0;i<arguments.length;i++) {
+					sum+=arguments[i];
+				}
+				console.log(sum);//102
+			}
+			fun(3,4,5,60,10,20);
+			
+			var a = 3;
+			var b = 5;
+			var c = b;  //c = 5
+			b = a;		//b = 3
+			a = c;		//a = 5
+			console.log(a,b);
+			
+			//冒泡排序
+			var arr = [54,12,3,4,5,6,7,33,44];
+			var count = 0;
+			for ( var i = 0;i<arr.length-1;i++) {
+				for ( var j = 0;j<arr.length-1-i;j++) {
+					if (arr[j] > arr[j+1]) {
+						//仓库  = 第二个			仓库=12
+						var temp = arr[j+1];
+						//第二个  = 第一个			第二个=54
+						arr[j+1] = arr[j];
+						//第一个   = 仓库			第一个=12
+						arr[j] = temp;
+					}
+					count++;
+				}
+			}
+			console.log(arr);
+			console.log(count);
+			
+		</script>-->
+		<!--<img src="img/1.jpeg" alt="" id="oImg" ucai="www.ucai.cn"/>-->
+		
+		<!--<script type="text/javascript">
+			var oImg = document.getElementById("oImg");
+			//事件三大要素： 对象 		事件 		
+			//改变图片路径
+			//1.oImg.src = "img/2.jpeg";
+			//2.oImg.setAttribute("src","img/2.jpeg");
+			
+			//getAttribute();   得到属性
+			//setAttribute();   设置属性
+			
+			//alert( oImg.ucai );
+			//alert( oImg.getAttribute("ucai") );
+			
+			console.log(oImg.getAttribute("style"));
+			console.log(typeof oImg.getAttribute("style"));
+		</script>-->
+	
+		<button>往左边</button>
+		<button>往右边</button>
+		<div class="oDiv" id="oDiv" style="left: 100px;"></div>
+		<script type="text/javascript">
+			var btn1 = document.getElementsByTagName("button")[0];
+			var btn2 = document.getElementsByTagName("button")[1];
+			var oDiv = document.getElementById("oDiv");
+			
+			//信号量
+			var oDivLeft = 100;
+			
+			btn1.onclick = function(){
+				/*alert( oDiv.style.left );//100px
+				var a = parseInt(oDiv.style.left);
+				a -= 10;
+				oDiv.style.left = a + "px";*/
+				oDivLeft -= 10;
+				oDiv.style.left = oDivLeft + "px";
+			}
+			btn2.onclick = function(){
+				/*alert( oDiv.style.left );//100px
+				var a = parseInt(oDiv.style.left);
+				a += 10;
+				oDiv.style.left = a + "px";*/
+				oDivLeft += 10;
+				oDiv.style.left = oDivLeft + "px";
+			}
+		</script>
+	</body>
+</html>

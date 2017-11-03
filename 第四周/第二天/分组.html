@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// \1重复调用
+			var re = /ab(cd)\1\1e/;
+			
+			console.log(re.test("abcdcde"));//true
+			console.log(re.test("abcde"));//false
+			console.log(re.test("abcdcdcde"));//true
+			
+			// \2重复调用2号分组
+			var re = /a(bc)d(ef)\2\1g/;
+			//var re = /abcdefefbcg/;
+			
+			console.log(re.test("abcdefefbcg"));//true
+			
+			
+			var str = "abcde";
+			
+			console.log(str.replace(/ab(cd)e/,"ab$1$1$1e"));//abcdcdcde
+			
+		</script>
+	</body>
+</html>

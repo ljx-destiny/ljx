@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		.oDiv{
+			width: 50px;
+			height: 300px;
+			position: absolute;
+			background-color: red;
+			left: 0;
+			top: 200px;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="oDiv" id="oDiv">
+			
+		</div>
+		
+		<script src="../js/animate.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var oDiv = document.getElementById("oDiv");
+			oDiv.onmouseover = function(){
+				//判断锁状态
+				//alert(oDiv.isanimated);
+				
+				//函数节流
+				if (oDiv.isanimated) return
+				animate(oDiv,{"width":200},2000);
+			}
+			oDiv.onmouseout = function(){
+				//函数节流
+				if (oDiv.isanimated) return
+				
+				animate(oDiv,{"width":50},2000);
+			}
+		</script>
+	</body>
+</html>

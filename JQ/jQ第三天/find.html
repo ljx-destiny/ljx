@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>find</title>
+		<style type="text/css">
+			p{
+				width: 60px;
+				height: 60px;
+				background: orange;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<!--find()返回的是自己的后代所有元素的列表-->
+		<div id="box">
+			<ul>
+				<li>
+					<p></p>
+				</li>
+				<li>
+					<p></p>
+				</li>
+				<li>
+					<p></p>
+				</li>
+				<li>
+					<p></p>
+				</li>
+			</ul>
+		</div>
+		
+		<script src="js/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			//改变所有p标签颜色
+			$("#box").find("p").css("background","red");
+			
+			//得到所有标签的数量
+			console.log($("#box").find("*").length);//得到所有标签的数量
+			
+			//改变所有标签里下标为2的颜色
+			$("#box").find("*").eq(2).css("background","blue");
+		</script>
+	</body>
+</html>

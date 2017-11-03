@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		
+		
+		<script src="js/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+//			delay()延迟
+			
+			//$("div").delay(2000).animate({"left":900},2000);//延时移动
+			
+//			$("div").delay(2000).slideUp();//延时向上消失
+//			$("div").delay(2000).slideDown();//延时向下出现
+			
+			$("div").delay(2000).hide(2000);//延时淡出消失
+			
+			
+		</script>
+	</body>
+</html>

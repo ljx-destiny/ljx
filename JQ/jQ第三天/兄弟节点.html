@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>siblings</title>
+		<style type="text/css">
+			p{
+				width: 40px;
+				height: 40px;
+				background: skyblue;
+			}
+			.cur{
+				background: gold;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p class="oP"></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</div>
+		
+		<script src="js/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			//改变oP的颜色
+			//$(".oP").siblings().css("background","pink");
+			
+			//改变兄弟里下标为奇数的颜色
+			//$(".oP").siblings(":odd").css("background","pink");
+			
+			//鼠标移入时，改变标签颜色
+			$('p').mouseenter(function() {
+				
+				$(this).addClass("cur").siblings().removeClass("cur");
+			
+			})
+			
+		</script>
+	</body>
+</html>

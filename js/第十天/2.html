@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		
+		<script src="../js/animate-2.0.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var oDiv = document.getElementsByTagName("div")[0];
+			//3个参数
+			//animate(oDiv,{"left",900},2000);
+			
+			//3个参数
+			//animate(oDiv,{"left",900},5000,"ElasticEaseIn");
+			
+			animate(oDiv,{"left",900},3000,function(){
+				oDiv.style.backgroundColor="purple";
+			});
+			//5个参数
+			animate(oDiv,{"left",900},3000,"ElasticEaseIn",
+			function(){
+				oDiv.style.backgroundColor="purple";
+			});
+		</script>
+	</body>
+</html>

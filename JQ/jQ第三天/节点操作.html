@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>添加节点</title>
+	</head>
+	<body>
+		<div id="box">
+			<p>哈哈</p>
+			<p>呵呵</p>
+		</div>
+		
+		
+		<script src="js/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//append就是往最后添加
+			var $obj = $("<p>嘻嘻</p>");
+			$obj.css("background","red");
+			$("#box").append($obj);
+			
+//			$("#box").append("<p>么么哒</p>");
+			
+			//appendTo 表示被动， 儿子appendTo父亲
+//			$("<p>嘻嘻-1</p>").appendTo( $("#box") );
+
+//			$("p").append("<span>span</span>");
+			
+//			$("<span>span</span>").appendTo( $("p") );
+			
+		</script>		
+	</body>
+</html>

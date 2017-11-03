@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1 id="oH">====</h1>
+		<input type="button" id="btn" value="点我获取文件" />
+		
+		<script type="text/javascript">
+			var oH = document.getElementById("oH");
+			var btn = document.getElementById("btn");
+			var str = "我是一个文本";
+			
+			btn.onclick = function(){
+				
+				var xhr = new XMLHttpRequest();
+				
+				xhr.onreadystatechange = function(){
+					
+					if (xhr.readyState == 4) {
+						oH.innerHTML = 
+					}
+				}
+			}
+			
+		</script>
+	</body>
+</html>

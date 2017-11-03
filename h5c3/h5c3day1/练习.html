@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>datalist标签定义选项列表</title>
+	</head>
+	<body>
+		<!--<datalist>标签定义选项列表。
+		请与input元素配合使用该元素，来定义 input 可能的值。
+		datalist 及其选项不会被显示出来，它仅仅是合法的输入值列表。
+		请使用 input 元素的 list 属性来绑定 datalist。-->
+		<input type="text" list="datalist" />
+		<datalist id="datalist">
+			<option value="石景山">石景山</option>
+			<option value="海淀">海淀</option>
+			<option value="门头沟">门头沟</option>
+			<option value="朝阳">朝阳</option>
+		</datalist>
+		
+		<script type="text/javascript">
+			var datalist = document.querySelector("#datalist");
+			console.log(datalist);
+			var xhr = new XMLHttpRequest();
+			
+			xhr.onreadystatechange=function(){
+				if (xhr.readyState == 4) {
+					var obj = JSON.parse(xhr.responseText);
+					console.log(obj);
+					var html = '';
+					for (var i=0;i<obj.length;i++) {
+						html += '<option value="'+obj[i]+'">'+obj[i]+'</option>'
+					}
+					console.log(html);
+					datalist.innerHTML=html;
+				}
+			}
+			
+			xhr.open("GET","data.json",true);
+			
+			xhr.send(null);
+		</script>
+	</body>
+</html>

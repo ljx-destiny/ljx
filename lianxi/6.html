@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="icon" href="rose.ico"/>
+	</head>
+	<body>
+		<ol>
+			<li id="li1">sadsdsad</li>
+			<li id="li2">sadsdsad</li>
+			<li id="li3">sadsdsad</li>
+			<li id="li4">sadsdsad</li>
+			<li id="li5">sadsdsad</li>
+			<li id="li6">sadsdsad</li>
+			<li id="li7">sadsdsad</li>
+			<li id="li8">sadsdsad</li>
+		</ol>
+		
+		<script type="text/javascript">
+			var	li = document.getElementsByTagName('li');
+//			for (var i=0;i<li.length;i++) {
+//				li[i].title=i
+//				li[i].style.color="blue"
+//				li[i].onclick=function(){
+//					for (var j=0;j<li.length;j++) {
+//						li[j].style.color="red"
+//					}
+//				}
+//			}
+
+			debugger
+			for (var i=0;i<li.length;i++) {
+				if (i==4) {
+					li[i].style.color="red"
+				} else{
+					li[i].style.color="green"
+				}
+			}
+		</script>
+	</body>
+</html>

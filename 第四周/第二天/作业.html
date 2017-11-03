@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<style type="text/css">
+			.hezi{
+				width: 350px;
+				height: 600px;
+				margin: 0 auto;
+				border: 1px solid black;
+			}
+			#btn1,#btn2{
+				width: 172px;
+				height: 50px;
+				font-size: 20px;
+			}
+			.box1{
+				width: 350px;
+				height: 524px;
+				text-align: center;
+				padding-top: 25px;
+				border-top: 1px solid black;
+			}
+			.box2{
+				width: 350px;
+				height: 424px;
+				text-align: center;
+				padding-top: 125px;
+				border-top: 1px solid black;
+			}
+			.box1 input{
+				width: 200px;
+				height: 30px;
+				margin-top: 10px;
+			}
+			.box2 input{
+				width: 200px;
+				height: 30px;
+				margin-top: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="hezi">
+			<input type="button" id="btn1" value="注册" />
+			<input type="button" id="btn2" value="登录" />
+			<div class="box1">
+				<form>
+					用户名：&nbsp;&nbsp;&nbsp;<input type="text" placeholder="请输入用户名(8-10位)" id="user"/><br />
+					&nbsp;&nbsp;密码：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" placeholder="请输入密码(8-10位)" id="password"/><br />
+					确认密码：<input type="password" placeholder="请再一次输入密码" id="password1"/><br />
+					QQ号：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" placeholder="请输入自己的QQ号" id="QQ"/><br />
+					&nbsp;&nbsp;邮箱：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" placeholder="请输入邮箱" id="email"/><br />
+					确认邮箱：<input type="email" placeholder="请再一次输入邮箱" id="email1"/><br />
+					手机号：&nbsp;&nbsp;&nbsp;<input type="tel" placeholder="请输入手机号(11位)" id="phone"/><br />
+					真实姓名：<input type="text" placeholder="请输入自己的真实姓名(2-4位中文)" id="name"/><br />
+					身份证号：<input type="number" placeholder="请输入自己的身份证号" id="number"/><br />
+					&nbsp;&nbsp;性别：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="请输入自己的性别" id="sex"/><br />
+					<input type="submit" id="zhuce" value="注册" style="width: 80px;"/>
+					<input type="reset" value="重置" style="width: 80px;"/>
+				</form>
+			</div>
+			<div class="box2">
+				用户名：&nbsp;&nbsp;&nbsp;<input type="text" placeholder="请输入用户名(8-10位)" id="user1"/><br />
+				&nbsp;&nbsp;密码：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" placeholder="请输入密码(8-10位)" id="password2"/><br />
+				<input type="submit" id="denglu" value="登录" style="width: 80px;"/>
+				<input type="button" value="注册" id="btn3" style="width: 80px;"/>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			var btn1 = document.getElementById("btn1");
+			var btn2 = document.getElementById("btn2");
+			var btn3 = document.getElementById("btn3");
+			var box1 = document.getElementsByClassName("box1")[0];
+			var box2 = document.getElementsByClassName("box2")[0];
+			var zhuce = document.getElementById("zhuce");
+			var denglu = document.getElementById("denglu");
+			
+			
+			box2.style.display="none";
+			btn1.onclick = function(){
+				box1.style.display="block";
+				box2.style.display="none";
+			}
+			btn2.onclick = function(){
+				box2.style.display="block";
+				box1.style.display="none";
+			}
+			zhuce.onclick = function(){
+				//用户名
+				var user = document.getElementById("user").value;
+				var yongHu = /^\w{8,10}$/;
+				if( yongHu.test( user ) ){
+					var a = 0;
+				}else{
+					alert("用户名输入错误！");
+				}
+				
+				//密码
+				var password = document.getElementById("password").value;
+				var miMa = /^\w{8,10}$/;
+				if( miMa.test( password ) ){
+					var b = 0;
+				}else{
+					alert("密码输入错误！");
+				}
+				
+				//确认密码
+				var password1 = document.getElementById("password1").value;
+				if( password==password1 ){
+					var c = 0;
+				}else{
+					alert("两次密码输入不一致！");
+				}
+				
+				//QQ号
+				var QQ = document.getElementById("QQ").value;
+				var QQHao = /^[1-9][0-9]{4,}$/;
+				if( QQHao.test( QQ ) ){
+					var d = 0;
+				}else{
+					alert("QQ号输入有误！");
+				}
+				
+				//邮箱
+				var email = document.getElementById("email").value;
+				var youXiang = /^\w+@\w+\.[a-z]{2,3}$/;
+				if( youXiang.test( email ) ){
+					var e = 0;
+				}else{
+					alert("邮箱输入有误！");
+				}
+				
+				//确认邮箱
+				var email1 = document.getElementById("email1").value;
+				if( email==email1 ){
+					var f = 0;
+				}else{
+					alert("两次邮箱输入不一致！");
+				}
+				
+				//手机
+				var phone = document.getElementById("phone").value;
+				var shouJi = /^1[34578]\d{9}$/;
+				if( shouJi.test( phone ) ){
+					var g = 0;
+				}else{
+					alert("手机号输入有误！");
+				}
+				
+				//真实姓名
+				var name = document.getElementById("name").value;
+				var xingMing = /^[\u4e00-\u9fa5]{2,4}/;
+				if( xingMing.test( name ) ){
+					var h = 0;
+				}else{
+					alert("姓名输入有误！");
+				}
+				
+				//身份证号
+				var numbre = document.getElementById("number").value;
+				var shenFen = /^(\d{17})([0-9]|X)$/;
+				if( xingMing.test( name ) ){
+					var i = 0;
+				}else{
+					alert("身份证号输入有误！");
+				}
+				
+				//性别
+				var sex = document.getElementById("sex").value;
+				var xingBie = /^(男|女)$/;
+				if( xingBie.test( sex ) ){
+					var j = 0;
+				}else{
+					alert("性别输入有误，只能输男或女！");
+				}
+				
+				if (a==0&&b==0&&c==0&&d==0&&e==0&&f==0&&g==0&&h==0&&i==0&&j==0) {
+					alert("注册成功！");
+					box2.style.display="block";
+				}
+			}
+			
+			denglu.onclick = function(){
+				//用户名
+				var user1 = document.getElementById("user1").value;
+				if( user==user1 ){
+					var x = 0;
+				}else{
+					alert("用户名输入错误！");
+				}
+				
+				//密码
+				var password2 = document.getElementById("password2").value;
+				if( password==password2 ){
+					var y = 0;
+				}else{
+					alert("密码输入错误！");
+				}
+				if (x==0&&y==0) {
+					alert("登录成功！");
+				}
+			}
+		
+			btn3.onclick = function(){
+				box1.style.display="block";
+			}
+		</script>
+	</body>
+</html>

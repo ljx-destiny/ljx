@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<button>11</button><button>22</button>
+		<div>111111</div><div>22222222</div>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var btn = document.getElementsByTagName("button")
+			var oDiv = document.getElementsByTagName("div")
+			
+			for (var i=0;i<btn.length;i++) {
+				oDiv[i].style.display="none"
+				btn[i].index = i
+				btn[i].onclick = function(){
+					for (var j=0;j<btn.length;j++) {
+						oDiv[j].style.display="none"
+					}
+					oDiv[this.index].style.display="block"
+				}
+			}
+		</script>
+	</body>
+</html>

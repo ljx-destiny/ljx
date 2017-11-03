@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//隐式转换：就是没有写parseInt()、parseFloat()自己帮你转格式
+		
+//			console.log(3 * "8");	//24
+//			console.log("3" * "8");	//24
+//			console.log("48" / "2"); //24
+//			console.log("24" % 55);	//24
+//			
+//			var a = 3;
+//			var b = 5;
+//			var c = 8;
+//			console.log(a>5); //false
+//			console.log(a<5); //true
+//			console.log(b<=c); //true
+//			
+//			var c = 10;
+//			if (c == 9) {
+//				alert("等于9");
+//			} else{
+//				alert("不等于9");				
+//			}
+//			console.log("我正常执行~");
+//			
+//			 var sex = prompt("请输入您的性别");
+//
+//          if( sex == "男"){
+//
+//              var age = prompt("请输入您的年龄");
+//              if(  age>= 23 ){
+//                  alert("你好先生！您的年龄可以结婚~");
+//              }else{
+//                  alert("你还太小~等两年吧~");
+//              }
+//
+//          }else if( sex == "女"){
+//
+//
+//          }else{
+//              alert("输入错误~请重新输入~");
+//          }
+
+
+            // bmi
+            // 获取用户信息
+            // 80kg 180
+            // 计算
+            // var bmi = 80 / (1.8*1.8)
+            // 80 /  Math.pow(1.8,2)
+                // 判断
+            // if (true) {}
+
+            //     <18.5  过轻
+            //     <25    正常
+            //     <28    过重
+            //     <32    肥胖
+            //     else   非常肥胖
+            
+			var a = prompt("请输入您的体重");
+			var b = prompt("请输入您的身高");
+			var bmi = a / Math.pow(b/100,2)
+			if (bmi<18.5) {
+				alert("过轻");
+			} else if (bmi<25) {
+				alert("正常");
+			} else if (bmi<28) {
+				alert("过重");
+			} else if (bmi<32) {
+				alert("肥胖");
+			} else {
+				alert("非常肥胖");
+			}
+			
+//			var str = prompt("请输入红包口令~领取现金~巨款~");
+//
+//          if( str == "HTML"){
+//              alert("恭喜你！口令正确~奖励你1元~");
+//          }else if( str == "CSS"){
+//              alert("恭喜你！口令正确~奖励你2元~");
+//          }else if( str == "JS"){
+//              alert("恭喜你！口令正确~奖励你10元~");
+//          }else{
+//              alert("口令错误~一毛都没有~");
+//          }
+			
+		</script>
+	</body>
+</html>

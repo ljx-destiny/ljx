@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+        	*{
+        		margin: 0;
+        		padding: 0;
+        	}
+        	.hezi{
+        		width: 980px;
+        		height: 442px;
+        		margin: 0 auto;
+        		margin-top: 50px;
+        	}
+        	.box{
+        		width: 300px;
+        		height: 440px;
+        		float: left;
+        		text-align: center;
+        		margin-right: 15px;
+        		position: relative;
+        	}
+        	#btn{
+        		width: 50px;
+        		height: 30px;
+        		top: 49px;
+        		margin-top: 0px;
+        		margin-left: 100px;
+        		position: absolute;
+        	}
+        	input{
+        		width: 20px;
+        		margin-top: 400px;
+        	}
+        	#image{
+        		width: 72px;
+        		height: 30px;
+        		top: 50px;
+        		position: absolute;
+        	}
+        	img{
+        		width: 665px;
+        		height: 442px;
+        	}
+        	#xiao{
+        		width: 200px;
+        		height: 270px;
+        		top: 100px;
+        		left: 80px;
+        		border: 1px solid black;
+        		position: absolute;
+        	}
+        	#zi{
+        		font-size: 40px;
+        		line-height: 270px;
+        	}
+        </style>
+    </head>
+    <body>
+    	<div class="hezi">
+    		<div class="box">
+    			<select name="" id="image">
+					
+       			</select>
+    			<input type="button" value="选择" id="btn" />
+    			<div id="xiao">
+    				<p id="zi">第1张图</p>
+    			</div>
+    			<input type="button" value="<" id="leftBtn" style="margin-left: 45px;" />
+	        	<input type="button" value=">" id="rightBtn" />
+    		</div>
+	        <img src="../img/1.jpeg" alt="" id="pic" />
+    	</div>
+        
+
+        <script type="text/javascript">
+        	var Image = document.getElementById("image");
+            var Btn = document.getElementById("btn");
+            var leftBtn = document.getElementById("leftBtn");
+            var rightBtn = document.getElementById("rightBtn");
+            var pic = document.getElementById("pic");
+            var xiao = document.getElementById("xiao");
+            var oP = document.getElementById("zi");
+
+            var index = 1;  //图片编号 1-5
+            for(var i=1;i<=5;i++){
+				Image.innerHTML += "<option value=" +i+ ">" +"第"+i+"张图"+ "</option>";
+        	}
+            
+			var Option = Image.getElementsByTagName("option");
+			Btn.onclick = function(){
+				var j = Image.value;
+				index = j;
+				go();
+			}
+			
+			Image.onclick = function(){
+				var j = Image.value;
+				oP.innerText = Option[j-1].innerHTML;
+				
+			}
+			
+            leftBtn.onclick = function(){
+                //先改变信号量
+                index--;
+                if(index<1 ){
+                    index = 5;
+                }
+
+                //调用业务函数
+                go();
+            }
+            rightBtn.onclick = function(){
+                //先改变信号量
+                index++;
+                if(index>5 ){
+                    index = 1;
+                }
+
+                //调用业务函数
+                go();
+            }
+
+            // 业务函数
+            function go(){
+                pic.src = "../img/" + index +  ".jpeg";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>点击获取</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				list-style: none;
+			}
+			li{
+				float: left;
+				width: 100px;
+				height: 40px;
+				line-height: 40px;
+				color: orange;
+				background-color: skyblue;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul></ul>
+		</div>
+		<input type="button" id="btn" value="点我" />
+		
+		
+		<script src="js/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			$("input").click(function(){
+				
+//				$.get("http://h6.duchengjiu.top/shop/api_cat.php",function(data){
+////					var a = data;
+////					$("#box").html(a);
+////					console.log(data);
+////					console.log(data.data[0].cat_name);
+//					
+//					var obj = data;
+//					
+//					for ( var i = 0; i<obj.data.length; i++) {
+//						//$("<span></span>").html(obj.data[i].cat_name).appendTo($('div'));
+//						//$("#box").append("<span>" +obj.data[i].cat_name+ "</span>")
+//						$("#box ul").append("<li><a href='http://www.baidu.com'>" +obj.data[i].cat_name+ "</a></li>")
+//					}
+//				})
+				//要求：li里有a标签，a标签有href属性为百度地址，a包裹这数据每一条；加样式
+				
+			
+			
+				$.ajax("http://h6.duchengjiu.top/shop/api_cat.php",{
+					"type":"get",
+					"data":{
+						"name":"xiaoming",
+						"age":18
+					},
+					"success":function(data){
+						var obj = data;
+						
+						for ( var i = 0; i<obj.data.length; i++) {
+							
+							$("#box ul").append("<li><a href='http://www.baidu.com'>" +obj.data[i].cat_name+ "</a></li>")
+						}
+					},
+					"error":function(){
+						alert("请求失败");
+					}
+					
+				});
+			})
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

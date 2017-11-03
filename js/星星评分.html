@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				width: 150px;
+				height: 40px;
+				list-style: none;
+				margin: 100px auto;
+				background-color: skyblue;
+			}
+			ul li{
+				width: 27px;
+				height: 29px;
+				cursor: pointer;
+				float: left;
+				background: url(img/star/1.png) no-repeat;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		
+		<script type="text/javascript">
+			window.onload = function(){
+				var oUl = document.getElementsByTagName("ul")[0];
+				var aLi = document.getElementsByTagName("li");
+				
+				for (var i = 0;i<aLi.length;i++) {
+					//编号
+					aLi[i].index = i;
+					
+					aLi[i].onmouseover = function(){
+						//循环里面每个li和当前里的下标比小于和等于下标的改变背景图片路径
+						for (var j = 0;j<aLi.length;j++) {
+							if ( j<=this.index ) {
+								aLi[j].style.backgroundImage="url(img/star/2.png)";
+							}else{
+								aLi[j].style.backgroundImage="url(img/star/1.png)";
+							}
+						}
+					}
+					
+					aLi[i].onclick = function(){
+						alert("亲，恭喜你获得"+(this.index+1) + "星！评价~");
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

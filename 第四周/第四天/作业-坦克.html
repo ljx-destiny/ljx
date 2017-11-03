@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#hezi{
+				width: 800px;
+				height: 400px;
+				margin: 0 auto;
+				margin-top: 100px;
+				border: 1px solid #666;
+				position:relative;
+			}
+			#tanke{
+				width: 158px;
+				height: 100px;
+				position:absolute;
+                top:0;
+                left:0;
+			}
+			#tanke img{
+				width: 158px;
+			}
+			#zidan{
+				position:absolute;
+				top: 22px;
+				left: 160px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="hezi">
+			<div id="tanke">
+				<img src="../img/坦克.png"/>
+				<img src="../img/子弹.jpg" id="zidan" style="width: 21px;"/>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			var hezi = document.getElementById("hezi");
+			var tanke = document.getElementById("tanke");
+			var zidan = document.getElementById("zidan");
+		
+			tanke.onmousedown = function(e){
+                e = e || window.event;
+
+                //增量，这个是当前鼠标的视口位置-p标签相对于父亲的位置
+                //所以减出来的结果，就是把hezi的相对视口位置给的出来了
+                var disX = e.clientX - tanke.clientLeft;
+                var disY = e.clientY - tanke.clientTop;
+
+                hezi.onmousemove = function(e){
+                    e = e || window.event;
+
+                    var x = e.clientX - disX;
+                    var y = e.clientY - disY;
+
+                    //在大盒子中拖拽，范围设置
+                    if( x <0 ) x = 0;
+                    if( y <0 ) y = 0;
+
+                    if( x > hezi.clientWidth - tanke.clientWidth) {
+                        x = hezi.clientWidth - tanke.clientWidth - 25;
+                    }
+                    if( y > hezi.clientHeight - tanke.clientHeight) {
+                        y = hezi.clientHeight - tanke.clientHeight;
+                    }
+
+                    tanke.style.left = x + "px";
+                    tanke.style.top = y + "px";
+
+	                }
+	                hezi.onmouseup = function(){
+	                    hezi.onmousemove = null;
+	                }
+	            }
+			function getAllTop(obj){
+	            //累加器，累加器的初始值不是0，而是自己现在的offsetTop
+	            //一会儿while语句直接从他父级开始
+	            var allTop = obj.offsetTop;
+	
+	            //当前正算高度的元素
+	            var currentObj = obj;
+	            while( currentObj = currentObj.offsetParent){
+	                allTop += currentObj.offsetTop;
+	            }
+	
+	            return allTop;
+	        }
+	
+	        function getAllLeft(obj){
+	            //累加器，累加器的初始值不是0，而是自己现在的offsetLeft
+	            //一会儿while语句直接从他父级开始
+	            var allLeft = obj.offsetLeft;
+	
+	            //当前正算高度的元素
+	            var currentObj = obj;
+	            while( currentObj = currentObj.offsetParent){
+	                allLeft += currentObj.offsetLeft;
+	            }
+	
+	            return allLeft;
+	        }
+		</script>
+	</body>
+</html>

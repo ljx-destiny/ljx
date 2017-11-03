@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script src="js/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//通过location.search获取get传参的数据 截取？
+			var str = location.search.substr(1);
+			//用分割方法得到= 号两边内容
+			var catId = str.split("=");
+			//用下标找到id的值
+			console.log(catId[1]);
+			
+			$.ajax({
+				type:"GET",
+				url:"http://h6.duchengjiu.top/shop/api_cat.php",
+				"data":{
+					"cat_id": catId[1]
+				},
+				"dataType": "json",
+				"success": function(data){
+					console.log(data);
+				}
+			});
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			p{display: none;}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li id="li1"><h2>你好</h2><p id="p1" style="display: none;">sadsadsad</p></li>			
+			<li id="li2"><h2>你好</h2><p id="p2" style="display: none;">sadsadsad</p></li>			
+			<li id="li3"><h2>你好</h2><p id="p3" style="display: none;">sadsadsad</p></li>
+		</ul>
+		
+		<script type="text/javascript">
+			var	li = document.getElementsByTagName('li');
+			var	p = document.getElementsByTagName('p');
+			for (var i=0;i<li.length;i++) {
+				li[i].title=i
+				li[i].onclick=function(){
+					if (p[this.title].style.display == "none") {
+					p[this.title].style.display="block"
+					} else{
+						p[this.title].style.display = "none"
+					}
+					
+				}
+			}
+		</script>
+		
+	</body>
+</html>

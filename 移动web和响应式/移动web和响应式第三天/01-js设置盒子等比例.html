@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>动态获取宽高</title>
+		<style type="text/css">
+			div{
+				float: left;
+				width: 50%;
+				border: 1px solid #000;
+				box-sizing: border-box;
+				background: url(img/earlyBg.jpg) no-repeat;
+				background-size: cover;
+				/*height: 200px;*/
+				padding-top: 54%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		<div class="box"></div>
+		
+		<script type="text/javascript">
+			var boxs =document.querySelectorAll(".box");
+			set();
+			
+			window.onresize = set;
+			
+			function set(){
+				//console.log(getComputedStyle(boxs[0])["width"]);
+				var boxWidth = parseFloat(getComputedStyle(boxs[0])["width"]);
+				console.log(boxWidth);
+				console.log(boxWidth / (640 / 764));
+				
+				boxs[0].style.height = boxWidth / (640 / 764) + "px";
+				boxs[1].style.height = boxWidth / (640 / 764) + "px";
+			}
+				
+			
+		</script>
+	</body>
+</html>

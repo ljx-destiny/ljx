@@ -1,0 +1,209 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.sheji{
+	width: 1180px;
+	height: 350px;
+	margin: 0 auto;
+}
+.zi{
+	width: 1180px;
+	height: 45px;
+	border-bottom: 1px solid #EEEEEE;
+}
+.zi p{
+    width: auto;
+    height: 24px;
+    line-height: 24px;
+    float: left;
+    font-family: 微软雅黑;
+    cursor: pointer;
+    color: rgb(51, 51, 51);
+    font-size: 24px;
+    margin-right: 30px;
+}
+.zi label {
+    width: auto;
+    float: right;
+    padding-top: 12px;
+    cursor: default;
+}
+.zi label a {
+    width: auto;
+    float: left;
+    font-size: 12px;
+    margin-left: 20px;
+    color: #999;
+    text-decoration: none;
+}
+.zhao{
+	width: 1180px;
+	height: 286px;
+	margin-top: 20px;
+}
+.zhao .zuo{
+	width: 158px;
+	height: 284px;
+	border: 1px solid #EEEEEE;
+	float: left;
+	background-color: white;
+}
+.zhao .zuo ul{
+	width: 156px;
+	height: 70px;
+	text-align: center;
+	line-height: 70px;
+}
+.zhao .zuo ul li{
+	width: 156px;
+	height: 70px;
+	border-left: 3px solid #FFFFFF;
+	border-bottom: 1px solid #EEEEEE;
+	list-style: none;
+}
+.zhao .zuo ul li a{
+	text-decoration: none;
+	font-size: 14px;
+	color: #666666;
+}
+.zhao .zuo ul li:hover{
+	border-left: 3px solid #DD4F50;
+}
+.zhao .zuo ul li:hover a{
+	color: #DD4F50;
+}
+.zhao .zuo .si:hover .tu{
+	background-color: red;
+}
+.zhao .you{
+	width: 995px;
+	height: 285px;
+	float: right;
+	margin-left: 25px;
+}
+.zhao .you .tu{
+	width: 995px;
+	height: 285px;
+}
+.wu{
+	width: 186px;
+	height: 285px;
+	float: left;
+	margin-right: 16px;
+	background-color: gainsboro;
+}
+.wu .shang{
+	width: 186px;
+	height: 186px;
+	position: relative;
+}
+.wu .shang img{
+	width: 186px;
+	height: 186px;
+}
+.wu p{
+	position: absolute;
+	font-size: 12PX;
+}
+.yi{
+	float: left;
+	color: white;
+	margin-left: 18px;
+	margin-top: -25px;
+}
+.er{
+	color: #CCCCCC;
+	margin-left: 82px;
+	margin-top: -25px;
+}
+.wu .xia{
+	width: 82px;
+	height: 82px;
+	position: relative;
+}
+.wu .xia img{
+	width: 82px;
+	height: 82px;
+	margin-top: 13px;
+}
+.san{
+	margin-top: -23px;
+	margin-left: 5px;
+	color: white;
+}
+.si{
+	margin-top: -23px;
+	margin-left: 125px;
+	color: white;
+}
+.anli{
+	width: 1180px;
+	height: 440px;
+	margin: 0 auto;
+	margin-top: 55px;
+}
+.box{
+	width: 1180px;
+	height: 376px;
+	margin: 0 auto;
+}	
+.box1 {
+	width: 280px;
+	height: 376px;
+	float: left;
+	margin-left: 15px;
+}	
+.box1-1 {
+	width: 280px;
+	height: 280px;
+	float: left;
+}
+.box1-1 img {
+	height: 280px;
+	position: relative;
+}
+.box1-1 img:hover {
+	opacity: 0.9;
+}
+.box1-2{
+	width: 280px;
+	height: 60px;
+}
+.box1-2 img{
+	border-radius: 31px;
+	margin-left: -170px;
+	margin-top: 250px;
+	position: absolute;
+}
+.box1-3 {
+	width: 280px;
+	height: 66px;
+	margin-top: -16px;
+}
+.wenzi{
+	text-align: center;
+	text-decoration: none;
+	line-height: 90px; 
+}
+.wenzi:hover{
+	color: red;
+	cursor: pointer;
+}
+h5{
+	text-align: center;
+	margin-top: -40px;
+}
+.jigou{
+	width: 1180px;
+	height: 217px;
+	margin: 0 auto;
+	margin-top: 55px;
+}
+
+.tuku{
+	width: 1180px;
+	height: 654px;
+	margin: 0 auto;
+	margin-top: 55px;
+}

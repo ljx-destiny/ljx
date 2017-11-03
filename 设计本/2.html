@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		*{
+			padding: 0;margin: 0;}
+			div{
+				width: 100px;
+				height: 200px;
+				border: 1px solid #ccc;
+			}
+			#box{
+				width: 200px;
+				height: 300px;
+				background: aqua;
+				margin: 50px auto;
+			}
+			#search{
+				width: 93px;
+				height: 20px;
+				margin-top: 5px;
+				border: 1px solid #ccc;
+			    font-size: 12px;
+			    cursor: pointer;
+			}
+			#lab{
+                border-top-color: white;
+			    width: 93px;
+			    height: auto;
+			    background: #fff;
+			    border-top: none;
+
+			}
+			.search_tags{
+			    height: 25px;
+			    line-height: 25px;
+			}
+			#lab a{
+				display: block;
+                padding: 0px 8px;
+				text-decoration: none;
+			    outline: none;
+			    font-size: 12px;
+			    cursor: pointer;
+			    color: #666;
+			}
+			#lab a:hover{
+				background-color: #CCCCCC;
+				color: red;
+			}
+			</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="search"><p>找图集</p></div>
+			<div id="lab" style="display: none;">
+				<a class="search_tags" href="#" id="1">找图片</a>
+				<a class="search_tags" href="#" id="10">找案例</a>
+				<a class="search_tags" href="#" id="7">找设计师</a>
+				<a class="search_tags" href="#" id="9">找问答</a>
+				<a class="search_tags" href="#" id="3">找模型</a>
+			</div>
+		</div>
+		<script>
+			var oDox=document.getElementById("box");
+			var osearch=document.getElementById("search");
+			var oLab=document.getElementById("lab");
+			var oA=document.getElementsByTagName("a");
+			oDox.onmouseover=function(){
+				oLab.style.display="block";
+			}
+			oDox.onmouseout=function(){
+				oLab.style.display="none";
+			}
+			
+			for(var i=0;i<oA.length;i++){
+				oA[i].index=i;
+				oA[i].onclick=function(){
+					osearch.innerHTML= oA[this.index].innerHTML;
+					//console.log(oA[this.index].innerText);
+			 	}
+			}
+			
+		</script>
+	</body>
+</html>

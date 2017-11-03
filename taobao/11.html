@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/taobao.css"/>
+		<style type="text/css">
+			.king {
+				width: 899px;
+				height: 37px;
+				background: #F1F1F1;
+				margin: 0 auto;
+				background: url(img/41.png) no-repeat center -719px;
+				text-indent: 850px;
+			}
+			
+			.king a {
+				width: 75px;
+				height: 20px;
+				border-radius: 25px;
+				background: #ffffff;
+			}
+			
+			.king a:hover {
+				background: #FF581C;
+				color: #fff
+			}
+			
+			.fashion1 {
+				width: 892px;
+				height: 260px;
+				margin-left: 80px;
+			}
+			
+			.bag {
+				height: 260px;
+				width: 220px;
+				margin-left: 2px;
+				float: left;
+				background:#fff;
+				
+			}
+			.bag:hover{box-shadow: 1px 1px 1px 1px #F22E00;}
+			
+			.ifashion {
+				height: 35px;
+				width: 220px;
+				border-bottom: 1px solid #F0F0F0;
+				text-align: center;
+			}
+			
+			.vacation-left {
+				width: 100px;
+				height: 211px;
+				
+				float: left;
+				border-right: 1px solid #F0F0F0;
+				text-align: center;
+				position: relative;
+			}
+			
+			.vacation-right {
+				width: 118px;
+				height: 225px;
+				
+				float: left;
+				border-right: 1px solid #F0F0F0;
+				position: relative;
+			}
+			.bag1{
+				position: relative;
+				z-index: 1;
+				width: 100px;
+			}
+			
+			.beach {
+				display: inline;
+				width: 100px;
+				height: 22px;
+				color: #fff;
+				font-size: 12px;
+				text-align: center;
+				background: #FF0055;
+				position: absolute;
+				z-index: 2;
+				top:180px;
+				left: 0px;
+				padding-top: 20px;
+			}
+			.up{
+				width: 110px;
+				height: 105px;
+				
+				border-right: 1px solid #F0F0F0;
+				border-bottom: 1px solid #F0F0F0;
+				text-align: center;
+				padding-top: 5px;
+				
+			}
+			.vacation-right a :hover .ill{color: #FF0055;background: #fff;opacity: 1;}
+			
+		
+		.ill{width:100px;
+			
+				height:15px;
+				color: #000000;
+				font-size: 12px;
+				text-align: center;
+				background: #fff;
+				position: absolute;
+				
+				z-index: 2;
+				margin-top: -25px;
+				padding-top: 7px;
+				opacity: 0.5;
+				left: 9px;
+				
+			}
+			.fashion {
+				width: 890px;
+				height: 270px;
+				
+			}
+			.king a{font-size: 12px;color: #000000;text-decoration: none;}
+			.pinzhi{
+				width: 892px;
+				height: 260px;
+				margin-left: 80px;
+				margin-top: 50px;
+			}
+			.sikuai{
+				width: 221px;
+				height: 258px;
+				float: left;
+				background-color: #F1F1F1;
+				border: 1px solid #F1F1F1;
+			}
+			.sikuai:hover{
+				border: 1px solid red;
+			}
+			.tou{
+				width: 221px;
+				height: 39px;
+				line-height: 39px;
+				background-color: white;
+				margin-bottom: 1px;
+				text-align: center;
+			}
+			.tou img{
+				height: 20px;
+			}
+			.situ{
+				width: 221px;
+				height: 221px;
+			}
+			.situ_1{
+				width: 110px;
+				height: 108px;
+				float: left;
+				position: relative;
+				background-color: white;
+			}
+			.situ_1 img{
+				width: 90px;
+				padding: 10px;
+			}
+			.situ_1 .situ1{
+			    position: absolute;
+			    bottom: 8px;
+			    height: 20px;
+			    line-height: 20px;
+			    color: #3C3C3C;
+			    font-size: 12px;
+			    left: 10px;
+			    right: 10px;
+			    background-color: #ECEEF0;
+			    opacity: 0.6;
+			    text-align: center;
+			    text-decoration: none;
+			}
+			.situ_1 a:hover{
+				 opacity: 1;
+		   		color: #FF4400;
+			}
+			.taobao{
+			    	width: 221px;
+			    	height: 258px;
+			    	float: left;
+			    	background: white;
+			    	border: 1px solid #F1F1F1;
+			    }
+			    .taobao:hover{
+			    	border: 1px solid red;
+			    }
+			    .tao-up{
+			    	height: 39px;
+			    	width: 221px;
+			    	border-bottom: 1px solid #F1F1F1;
+			    	
+			    }
+			    .tao-middle{
+			    	height: 160px;
+			    	width: 221px;
+			    	border-bottom: 1px solid #F1F1F1;
+			    }
+			    .Tbao{
+			    	height: 18px;
+			    	width: 82.5px;
+			    	float: left;
+			    	margin-left: 60px;
+			    	margin-top: 10px;
+			    }
+			    .mode{
+			    	height: 18px;
+			    	height: 20px;
+			    	float: left;
+			    	margin-left: 10px;
+			    	margin-top: 10px;
+			    	
+			    }
+			   .middle-z{
+			   	width: 100px;
+			   	height: 160px;
+			   	float: left;
+			   	margin-left: 7px;
+			   }
+			   .middle-z a{
+			   	color: #3C3C3C;
+			   	text-decoration: none;
+			   }
+			   .middle-z-up{
+			   	width: 100px;
+			   	height: 90px;
+			   	margin-left: 5px;
+			   	margin-top: 10px;
+			   	
+			   }
+			   .middle-z-up img{
+			   	width: 90px;
+			   	height: 90px;
+			   }
+			 .middle-z-down{
+			 	height: 45px;
+			 	width: 100px;
+			 	text-align: center;
+			 }
+			 .middle-z-down strong{
+                font-size: 15px;
+                margin-top: 10px;
+                display: block;
+                margin-bottom: 4px;
+                height: 21px;
+			 }
+			 .middle-z-down p{
+			 	font-size: 12px;
+			 	margin-top: 5px;
+			 }
+			 .middle-z :hover .middle-z-down {
+			 	color: red;
+			 }
+			 .tao-down{
+			    	height: 62px;
+			    	width: 221px;
+			    	margin-top: 10px;
+			    }
+			.tao-down a{
+				color: #3C3C3C;
+				font-size: 13px;
+				list-style: none;
+				text-decoration: none;
+				margin-left: 10px;
+			}
+			.tao-down a:hover{
+				color: red;
+			}
+
+		
+		</style>
+	</head>
+	<body>
+		<div class="fashion1">
+			<h2 class="king"><a href="#">更多</a></h2>
+		<div class="fashion">
+						<div class="bag">
+							<div class="ifashion"><img src="img/1-4.png" /></div>
+							<div class="vacation">
+								<div class="vacation-left"><img src="img/1-5.jpg"class="bag1" /><span class="beach">沙滩度假连衣裙</span></div>
+								
+								<div class="vacation-right">
+									<a href="#">
+										<div class="up">
+										
+										<img src="img/1-6.jpg"/ class="bag1">
+										<p class="ill">包治百病</p>
+									</div>
+									</a>
+									
+									<a href="#">
+										<div class="up">
+										
+										<img src="img/1-7.jpg"/ class="bag1">
+										<p class="ill">女神战靴</p>
+									</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="bag">
+							<div class="ifashion"><img src="img/1-15.png" /></div>
+							<div class="vacation-right"style="float: left;width: 108px;">
+									<a href="#">
+										<div class="up">
+										
+										<img src="img/1-11.jpg"/ class="bag1">
+										<p class="ill">限量口红</p>
+									</div>
+									</a>
+									
+									<a href="#">
+										<div class="up">
+										
+										<img src="img/1-12.jpg"/ class="bag1">
+										<p class="ill">精致项链</p>
+									</div>
+									</a>
+								</div>
+								<div class="vacation-right"style="float: right;width: 108px;">
+									<a href="#">
+										<div class="up">
+										
+										<img src="img/1-13.jpg"/ class="bag1">
+										<p class="ill">包治百病</p>
+									</div>
+									</a>
+									
+									<a href="#">
+										<div class="up">
+										
+										<img src="img/1-14.jpg"/ class="bag1">
+										<p class="ill">野田珐琅壶</p>
+									</div>
+									</a>
+								</div>
+						</div>
+						<div class="bag">
+							<div class="ifashion"><img src="img/1-11.png" /></div>
+							<div class="vacation">
+								<div class="vacation-left"><img src="img/1-8.jpg"class="bag1" /><span class="beach"style="background: #940CE2;">唇膏精选</span></div>
+								
+								<div class="vacation-right">
+									<a href="#">
+										<div class="up">
+										
+										<img src="img/1-9.jpg"/ class="bag1">
+										<p class="ill">最潮撩汉妆</p>
+									</div>
+									</a>
+									
+									<a href="#">
+										<div class="up">
+										
+										<img src="img/1-10.jpg"/ class="bag1">
+										<p class="ill">美发精选</p>
+									</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="bag">
+							<div class="ifashion"><img src="img/1-16.png" /></div>
+							<div class="vacation-right"style="float: left;width: 108px;">
+									<a href="#">
+										<div class="up">
+										
+										<img src="img/1-17.jpg"/ class="bag1">
+										<p class="ill">懒人必备连衣裙</p>
+									</div>
+									</a>
+									
+									<a href="#">
+										<div class="up">
+										
+										<img src="img/1-18.jpg"/ class="bag1">
+										<p class="ill">小清新家具</p>
+									</div>
+									</a>
+								</div>
+								<div class="vacation-right"style="float: right;width: 108px;">
+									<a href="#">
+										<div class="up">
+										
+										<img src="img/1-19.jpg"/ class="bag1">
+										<p class="ill">今夏漏背杀</p>
+									</div>
+									</a>
+									
+									<a href="#">
+										<div class="up">
+										
+										<img src="img/1-20.jpg"/ class="bag1">
+										<p class="ill">春夏编发tips</p>
+									</div>
+									</a>
+								</div>
+						</div>
+					</div>
+		</div>
+		<div class="pinzhi">
+			<h2 class="king" style="background-position-y: -680px;"><a href="#">更多</a></h2>
+			<div class="taobao">	
+			<div class="tao-up">
+			<a href="#"><img src="img/chi.png" class="Tbao"/></a>	
+			<a href="#"><img src="img/mode.jpg" class="mode"/>
+			</a>	
+			</div>
+			<div class="tao-middle">
+				<div class="middle-z">
+					<a href="#"><div class="middle-z-up">
+						<img src="img/meat.jpg" />
+					</div>
+					<div class="middle-z-down">
+						<strong>正宗牛肉丸</strong>
+						<p>Q弹有嚼劲</p>
+					</div>
+				</div>
+				<div class="middle-z">
+					<a href="#"><div class="middle-z-up">
+						<img src="img/shiliu.jpg" />
+					</div>
+					<div class="middle-z-down">
+						<strong>鲜甜石榴</strong>
+						<p>皮薄水汁甜</p>
+					</div>
+				</div>
+				</a>
+			</div>
+			<div class="tao-down">
+				<a href="#">应季鲜果</a>
+				<a href="#">精致糕点</a>
+				<a href="#">全球美食</a>
+				<a href="#">烘培原料</a>
+				<a href="#">无辣不欢</a>
+				<a href="#">生猛海鲜</a>
+			</div>
+			
+		</div>
+
+			<div class="sikuai">
+				<div class="tou">
+					<img src="img/ji.png"/>
+					<img src="img/ewm.png"/>
+				</div>
+				<div class="situ">
+					<div class="situ_1" style="margin-right: 1px;">
+						<img src="img/situ1.png"/>
+						<a href="#" class="situ1">用爱筑造梦想</a>
+					</div>
+					<div class="situ_1" style="margin-bottom: 1px;">
+						<img src="img/situ2.jpg"/>
+						<a href="#" class="situ1">嘻哈时尚</a>
+					</div>
+					<div class="situ_1">
+						<img src="img/situ3.jpg"/>
+						<a href="#" class="situ1">蓝色多瑙河</a>
+					</div>
+					<div class="situ_1" style="margin-left: 1px;">
+						<img src="img/situ4.jpg"/>
+						<a href="#" class="situ1">做饭玩出小清新</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="taobao">	
+			<div class="tao-up">
+			<a href="#"><img src="img/gediao.png" class="Tbao"/></a>
+			</div>
+			<div class="tao-middle">
+				<div class="middle-z">
+					<a href="#"><div class="middle-z-up">
+						<img src="img/shoubiao.jpg" />
+					</div>
+					<div class="middle-z-down">
+						<strong>潮牌手表</strong>
+						<p>rumbatime</p>
+					</div>
+				</div>
+				<div class="middle-z">
+					<a href="#"><div class="middle-z-up">
+						<img src="img/fenxie.jpg" />
+					</div>
+					<div class="middle-z-down">
+						<strong>热门女鞋</strong>
+						<p>开口笑</p>
+					</div>
+				</div>
+				</a>
+			</div>
+			<div class="tao-down">
+				<a href="#">春天的包包</a>
+				<a href="#">chole墨镜</a>
+				<a href="#">小白鞋</a>
+				<a href="#">水润你</a>
+				<a href="#">压力山大女王</a>
+				<a href="#">Gucd酒神</a>
+			</div>
+			
+		</div>
+			
+			<div class="sikuai">
+				<div class="tou">
+					<img src="img/zao.jpg"/>
+					<img src="img/ewm.png"/>
+				</div>
+				<div class="situ">
+					<div class="situ_1" style="margin-right: 1px;">
+						<img src="img/bao1.jpg"/>
+						<a href="#" class="situ1">真皮中国风</a>
+					</div>
+					<div class="situ_1" style="margin-bottom: 1px;">
+						<img src="img/bao2.jpg"/>
+						<a href="#" class="situ1">纯棉婴儿爬服</a>
+					</div>
+					<div class="situ_1">
+						<img src="img/bao3.jpg"/>
+						<a href="#" class="situ1">顶尖品质箱子</a>
+					</div>
+					<div class="situ_1" style="margin-left: 1px;">
+						<img src="img/bao4.jpg"/>
+						<a href="#" class="situ1">棉麻素色床品</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="remai">
+        	<div class="smalltitle">
+        		<span>———</span>
+        		<i><img src="img/remai.png"/></i>
+        		<h4>热卖单品</h4>
+        		<span>———</span>
+        	</div>
+        	<div class="smallnav">
+        		<a href="#">客厅灯</a>
+        		<a href="#">床垫</a>
+        		<a href="#">沙发垫</a>
+        		<a href="#">文胸</a>
+        		<a href="#">电脑椅</a>
+        		<a href="#">衣柜</a>
+        		<a href="#">男内裤</a>
+        		<a href="#">运动鞋</a>
+        		<a href="#">电脑桌</a>
+        		<a href="#">窗帘</a>
+        		<a href="#">鞋柜</a>
+        		<a href="#">牛仔裤</a>
+        		<a href="#">凉鞋男</a>
+        		<a href="#">茶几</a>
+        		<a href="#">椅子</a>
+        		<a href="#">凉席</a>
+        		<a href="#">沙发</a>
+        		<a href="#">男包</a>
+        		<a href="#">拉杆箱</a>
+        		<a href="#">t恤男</a>
+        		<a href="#">男T恤</a>
+        		<a href="#">面膜</a>
+        		<a href="#">短裤男</a>
+        	</div>
+			<div class="one">
+				<div class="zuo">
+					<img src="img/100.webp"/>
+					<span class="qian"> ¥39.00</span><br />
+					<span class="bao"style="margin-left: 10px">包邮  月销1224笔</span><br />
+					<h5>网眼设计透气性吸湿性排汗性能更好酷热夏天休闲穿着舒适</h5>
+					<div class="zuoxia">
+					<span class="shoucang">评价0 收藏1230</span>
+					</div>
+				</div>
+				<div class="you">
+					<div class="youshang">
+						<img src="img/101.webp"/>
+						<span class="qian1"> ¥419.00</span><br />
+						<span class="bao"style="margin-left: 10px">包邮  月销1224笔</span>
+					</div>
+					<div class="youxia">
+						<img src="img/102.webp"/>
+						<span class="qian1"> ¥419.00</span><br />
+						<span class="bao"style="margin-left: 10px">包邮  月销1224笔</span>
+					</div>
+					
+				</div>
+				<div class="xia213">
+						<img src="img/103.jpg"/>
+					</div>
+			</div>
+        	<div class="kuai">
+			<div class="xk1">
+				<img src="img/x220.jpg"/>
+				<div class="price">
+					<a href="#"><h2>￥ 268.00</h2></a>
+					<p>月销615笔</p>
+					<p class="zhong">非精品不达人,买就买最好,我懂你!</p>
+					<p>评价 0收藏 106</p>
+				</div>
+			</div>
+			<div class="xk2">
+				<img src="img/x140.jpg"/>
+				<div class="price">
+					<a href="#"><h6>￥ 248.00</h6></a>
+					<p>月销615笔</p>
+				</div>
+			</div>
+			<div class="xk2">
+				<img src="img/0x140.jpg"/>
+				<div class="price">
+					<a href="#"><h6>￥ 105.00</h6></a>
+					<p>月销615笔</p>
+				</div>
+			</div>
+			<div class="xk3">
+				<img src="img/130.jpg"/>
+			</div>
+		</div>
+        <div class="hot-item-three">
+					<div class="one0">
+						<div class="one-1">
+							<a href="#"> <img src="img/11.jpg" /></a>
+							<div class="one-1-1">
+								<a href="#">
+									<span>¥ </span>
+									<em>159.00</em>
+								</a>
+							</div>
+							<div class="one-1-2">
+								<a href="#">月销37笔</a>
+							</div>
+							<div class="one-1-3">
+								<a href="#">有生之年能碰到老板这个店,够幸福的...</a>
+							</div>
+							<div class="one-1-4">
+								<a href="#">评价<em>107</em></a>
+							    <a href="#">收藏<em>1500</em></a>
+							</div>
+						</div>
+						<div class="one-2">
+							<a href="#">
+								<p>夏季风：男士皮带</p>
+								<span>去看看</span>
+							</a>
+						</div>
+
+					</div>
+					<div class="two">
+						<div class="two-1">
+							<a href="#"> <img src="img/12.jpg" /></a>
+							<div class="two-1-1">
+								<a href="#">
+									<span>¥ </span>
+									<em>159.00</em>
+								</a>
+							</div>
+							<div class="two-1-2">
+								<a class="two-1-2-a1" href="#"></a>
+								<a href="#">月销37笔</a>
+							</div>
+							
+						</div>
+						<div class="two-2"></div>
+					</div>
+					<div class="three">
+						<div class="three-1">
+							<a href="#"> <img src="img/12.jpg" /></a>
+							<div class="three-1-1">
+								<a href="#">
+									<span>¥ </span>
+									<em>159.00</em>
+								</a>
+							</div>
+							<div class="three-1-2">
+								
+								<a href="#">月销37笔</a>
+							</div>
+							
+						</div>
+						<div class="three-2"></div>
+					</div>
+					<div class="fore">
+						<div class="fore-1">
+							<a href="#"> <img src="img/13.jpg" /></a>
+						</div>
+						
+					</div>
+				</div>	
+        </div>
+	    <div class="online">
+	    	<div class="smalltitle taobaozhibo">
+        		<span>———</span>
+        		<i><img src="img/zhibo.png"/></i>
+        		<h4>淘宝直播</h4>
+        		<span>———</span>
+        </div>
+	    	<div class="yangyangzhibo">
+	    	<div class="yangyangtouxiang"></div>
+	    	<p class="txt">辣妈杨洋</p>
+	    	<div class="yangyang">
+	    		<div class="dabofang"></div>
+	    		<h3>整容式化妆技巧</h3>
+	    	</div>
+	    	<div class="xia">
+	    	<span class="zhibo">直播</span>
+	    	<span class="txt1">59观看</span>	
+	    	</div>
+	    	</div>
+	    	<div class="zhiboright">
+	    		<div class="shang">
+	    		<div class="xiaoheizhibo">
+	    			<div class="righttop">
+	    			<div class="xiaoheitouxiang"></div>
+	    			<span class="txtright">小黑曼巴哥哥</span>
+	    			</div>
+	    			<div class="xiaohei"><div class="xiaobofang"></div></div>
+	    			<div class="xiaright">
+	    	        <span class="xiaozhiboright">直播</span>
+	    	        <span class="rignhtxt1">55观看</span>	
+	    	        </div>
+	    		</div>
+	    		<div class="xiaoheizhibo">
+	    			<div class="righttop">
+	    			<div class="xiaoheitouxiang"></div>
+	    			<span class="txtright">小黑曼巴哥哥</span>
+	    			</div>
+	    			<div class="xiaohei">
+	    				<div class="xiaobofang"></div>
+	    			</div>
+	    			<div class="xiaright">
+	    	        <span class="xiaozhiboright">直播</span>
+	    	        <span class="rignhtxt1">55观看</span>	
+	    	        </div>
+	    		</div>
+	    		<div class="xiaoheizhibo">
+	    			<div class="righttop">
+	    			<div class="xiaoheitouxiang"></div>
+	    			<span class="txtright">小黑曼巴哥哥</span>
+	    			</div>
+	    			<div class="xiaohei"><div class="xiaobofang"></div></div>
+	    			<div class="xiaright">
+	    	        <span class="xiaozhiboright">直播</span>
+	    	        <span class="rignhtxt1">55观看</span>	
+	    	        </div>
+	    		</div>
+	    		<div class="xiaoheizhibo">
+	    			<div class="righttop">
+	    			<div class="xiaoheitouxiang"></div>
+	    			<span class="txtright">小黑曼巴哥哥</span>
+	    			</div>
+	    			<div class="xiaohei"><div class="xiaobofang"></div></div>
+	    			<div class="xiaright">
+	    	        <span class="xiaozhiboright">直播</span>
+	    	        <span class="rignhtxt1">55观看</span>	
+	    	        </div>
+	    	        
+	    		</div>
+	    	</div>
+	    	<div class="xiazhibo">
+	    		<div class="xiaoheizhibo">
+	    			<div class="righttop">
+	    			<div class="xiaoheitouxiang"></div>
+	    			<span class="txtright">小黑曼巴哥哥</span>
+	    			</div>
+	    			<div class="xiaohei"><div class="xiaobofang"></div></div>
+	    			<div class="xiaright">
+	    	        <span class="xiaozhiboright">直播</span>
+	    	        <span class="rignhtxt1">55观看</span>	
+	    	        </div>
+	    		</div>
+	    		<div class="xiaoheizhibo">
+	    			<div class="righttop">
+	    			<div class="xiaoheitouxiang"></div>
+	    			<span class="txtright">小黑曼巴哥哥</span>
+	    			</div>
+	    			<div class="xiaohei"><div class="xiaobofang"></div></div>
+	    			<div class="xiaright">
+	    	        <span class="xiaozhiboright">直播</span>
+	    	        <span class="rignhtxt1">55观看</span>	
+	    	        </div>
+	    		</div>
+	    		<div class="xiaoheizhibo">
+	    			<div class="righttop">
+	    			<div class="xiaoheitouxiang"></div>
+	    			<span class="txtright">小黑曼巴哥哥</span>
+	    			</div>
+	    			<div class="xiaohei"><div class="xiaobofang"></div></div>
+	    			<div class="xiaright">
+	    	        <span class="xiaozhiboright">直播</span>
+	    	        <span class="rignhtxt1">55观看</span>	
+	    	        </div>
+	    		</div>
+	    		<div class="xiaoheizhibo">
+	    			<div class="righttop">
+	    			<div class="xiaoheitouxiang"></div>
+	    			<span class="txtright">小黑曼巴哥哥</span>
+	    			</div>
+	    			<div class="xiaohei"><div class="xiaobofang"></div></div>
+	    			<div class="xiaright">
+	    	        <span class="xiaozhiboright">直播</span>
+	    	        <span class="rignhtxt1">55观看</span>	
+	    	        </div>
+	    		</div>
+	    	</div>
+	    	</div>
+	    </div> 
+		<div class="part5"style="background-color: white;">
+			<div class="part5-top">
+				<div class="part5-top-logo">
+					<div class="part5-top-xian">
+
+					</div>
+					<div class="part5-top-zhong">
+						<img src="img/19.png" />
+					</div>
+					<div class="part5-top-wenzi">
+						必买清单
+					</div>
+					<div class="part5-top-xian">
+
+					</div>
+				</div>
+			</div>
+			<div class="part5-down">
+				<div class="part5-down-1">
+					<h5><a href="#">系带已是旧式，流行炫飘逸绑带</a></h5>
+					<p><a href="#">你还不知道穿什么出门？17年最吸引我的大概就是长绑带的元素了，这种集合了</a></p>
+					<div class="part5-down-1-tu">
+						<div class="part5-down-1-tu-1">
+							<img src="img/20.jpg" />
+						</div>
+						<div class="part5-down-1-tu-2">
+							<img src="img/21.jpg" />
+
+						</div>
+						<div class="part5-down-1-tu-3">
+							<img src="img/22.jpg" />
+
+						</div>
+					</div>
+					<p><a href="#">寇小朵的美丽世界 分享8个宝贝</a></p>
+				</div>
+				<div class="part5-down-2">
+					<h5><a href="#">锐步焕发第二春 联名款美上天</a></h5>
+					<p><a href="#">Reebok在被adidas收购以后一直处于不温不火的状态， adidas 忙着追赶Nike顾不</a></p>
+					<div class="part5-down-1-tu">
+						<div class="part5-down-1-tu-1">
+							<img src="img/23.jpg" />
+
+						</div>
+						<div class="part5-down-1-tu-2">
+							<img src="img/24.jpg" />
+
+						</div>
+						<div class="part5-down-1-tu-3">
+							<img src="img/25.jpg" />
+
+						</div>
+					</div>
+					<p><a href="#">大_懒先生 分享8个宝贝</a></p>
+				</div>
+				<div class="part5-down-3">
+					<h5><a href="#">三种元素，让你秒变家居潮人</a></h5>
+					<p><a href="#">当全世界都在流行性冷淡风的时候，你是否和小喵一样，想要打破这种常规，化</a></p>
+					<div class="part5-down-1-tu">
+						<div class="part5-down-1-tu-1">
+							<img src="img/26.jpg" />
+
+						</div>
+						<div class="part5-down-1-tu-2">
+							<img src="img/27.jpg" />
+
+						</div>
+						<div class="part5-down-1-tu-3">
+							<img src="img/28.jpg" />
+
+						</div>
+					</div>
+					<p><a href="#">妙汇APP 分享6个宝贝</a></p>
+				</div>
+				<div class="part5-down-4">
+					<h5><a href="#">同样是小白鞋，但都没它们特别</a></h5>
+					<p><a href="#">恍恍惚惚不知不觉，小白鞋就已经成为每人必备的潮物了。但你总觉得穿上它并</a></p>
+					<div class="part5-down-1-tu">
+						<div class="part5-down-1-tu-1">
+							<a href="#"><img src="img/29.jpg" /></a>
+
+						</div>
+						<div class="part5-down-1-tu-2">
+							<a href="#"><img src="img/30.jpg" /></a>
+
+						</div>
+						<div class="part5-down-1-tu-3">
+							<a href="#"><img src="img/31.jpg" /></a>
+
+						</div>
+					</div>
+					<p><a href="#">亦漠 分享7个宝贝</a></p>
+				</div>
+
+			</div>
+
+		</div>
+	</body>
+</html>

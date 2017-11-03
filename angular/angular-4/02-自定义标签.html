@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="UTF-8">
+		<title>自定义标签</title>
+	</head>
+	<body>
+		<div ng-controller="Aaa">
+			<input type="text" ng-model="name" />
+			<p>父级{{name}}</p>
+			
+			<my-hi></my-hi>
+		</div>
+		
+		<script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			var m1 = angular.module('myApp',[]);
+			
+			m1.directive("myHi",function(){
+				return{
+					restrict:"E",
+					replace:true,
+					scope:true,
+//					scope:true子级改变父级不改变
+//					scope:false子级父级同时改变
+//					scope:{}子级父级分别改变
+					template:'<div>{{name}}<p><input type="text" ng-model="name" /></p></div>'
+				}
+			})
+			
+			m1.controller('Aaa',function($scope){
+				$scope.name = "张三";
+			})
+			
+		</script>
+	</body>
+</html>

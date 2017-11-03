@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+//			//全局变量是可以累加的，重复调用函数的时候，不会重置
+//			var a = 1;
+//			function fun(){
+//				a++;
+//				console.log(a);
+//			}
+//			fun();//2
+//			fun();//3
+//			fun();//4
+//			console.log(a);//4
+
+//			//垃圾回收机制
+//			function fun1(){
+//				var b = 1;
+//				b++;
+//				console.log(b);
+//			}
+//			fun1();//2
+//			fun1();//2
+//			fun1();//2
+
+			
+//			//经典闭包
+//         	//函数嵌套函数  子级函数调用父级函数的变量或者参数
+//         	function outer(){
+//              var a = 333;
+//              function inner(){
+//                  console.log(a);
+//              }
+//              return inner;   //outer返回了inner的引用
+//          }
+//
+//          var inn = outer();   //inn就是inner函数
+//
+//          inn(); //333
+			
+//			//闭包
+//			var inner;  //全局变量
+//
+//          function outer(){
+//
+//              var a = 333;  //局部
+//              var b = 420;  //局部
+//
+//              inner=function(){
+//                  alert(a);
+//                  alert(b);
+//              }
+//          }
+//
+//          outer();
+//
+//          var a = 111;  //全局
+//          var b = 222;  //全局
+//          inner();   //333 420
+
+//			function outer(x){
+//              function inner(y){
+//                  console.log(x+y);
+//              }
+//              return inner;
+//          }
+//
+//          var inn = outer(3);
+//
+//          inn(5);  //8
+//          inn(7);  //10
+//          inn(11);  //14
+//          inn(12);  //15
+
+//			function outer(m,n){
+//	            function inner(m){
+//	                alert(m+n);
+//	            }
+//	            return inner;
+//	        }
+//	
+//	        var inn = outer(3,4);
+//	
+//	        inn(6);  //10
+
+//		//数组
+//		var arr = [3,6,8];
+//
+//      console.log( arr[1]);  //6
+//
+//      var arr1 = [ 4 , "你好" ,true];
+//
+//      console.log(arr1[0]);
+//      console.log(arr1[1]);
+//      console.log(arr1[2]);
+//      console.log( arr1 );
+
+
+//      var arr = [3,5,7,9,123,44,57,2134,34,5,7,9,123,44,57,2134,34,5,7,9,123,44,57,2134,3411];
+//
+//      alert( arr.length );
+//
+//      console.log( arr[arr.length-1]);
+
+
+
+//      var arr = [3,5,7];
+//
+//      arr[4] = 11;
+//
+//      console.log(arr);
+//
+//      arr.length = 100;
+//
+//      console.log(arr);
+
+//		var arr = [ "图片" , "汽车" , "风景"];
+//
+//      for( var i = 0; i<arr.length;i++){
+//
+//          console.log( "这是数组中第" + i + "个是" + arr[i]);
+//      }
+
+		function sum(a,b,c){
+			//比较b,c大小
+			function fun(b,c){
+				if (b>c) {
+					return b;
+				} else{
+					return c;
+				}
+			}
+		}
+			
+		</script>
+	</body>
+</html>

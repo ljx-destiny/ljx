@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" />+<input type="text"/><button>=</button><span></span><br />
+		<input type="text" />-<input type="text"/><button>=</button><span></span><br />
+		<input type="text" />*<input type="text"/><button>=</button><span></span><br />
+		<input type="text" />/<input type="text"/><button>=</button><span></span><br />
+		
+		<script type="text/javascript">
+			var btn = document.getElementsByTagName("button")
+			var txt = document.getElementsByTagName("input")
+			var span = document.getElementsByTagName("span")
+			btn[0].onclick = function(){
+//				console.log(parseInt(txt[0].value)+parseInt(txt[1].value))
+				span[0].innerHTML = parseInt(txt[0].value)+parseInt(txt[1].value)
+			}
+			btn[1].onclick = function(){
+				span[1].innerHTML = parseInt(txt[2].value)-parseInt(txt[3].value)
+			}
+			btn[2].onclick = function(){
+				span[2].innerHTML = parseInt(txt[4].value)*parseInt(txt[5].value)
+			}
+			btn[3].onclick = function(){
+				span[3].innerHTML = parseInt(txt[6].value)/parseInt(txt[7].value)
+			}
+			
+				
+		</script>
+	
+	</body>
+</html>

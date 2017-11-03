@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="UTF-8">
+		<title>表单验证</title>
+	</head>
+	<body>
+			<hi></hi>
+			<!--标签方式一般用于模板替换或者重置HTML标签功能-->
+			
+			<div hi></div>
+			<!--属性方式一般用于功能实现-->
+			
+			<!--前面两种比较常用的！后面两种不是比较直观的-->
+			
+			<div class="hi"></div>
+			
+			<!-- directive:hi -->
+			<!--如果没有replace:true替换这个配置的话，是不能实现替换注释的-->
+			<!-- directive:hi(这里需要一个空格)-->
+		
+		<script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			var m1 = angular.module('myApp',[]);
+			
+			
+			//m1.directive("名称",function(){}
+			//创建一个自定义指令，接受两个参数，第一个是指令的名称，另一个是回调函数
+			m1.directive("hi",function(){
+				
+				return {
+//					restrict:"E",
+					//hi的类型定义E-element标签
+					//一定要大写E，小写不识别
+					
+//					restrict:"A",
+					//hi的类型定义A属性
+					//可以组合使用restrict:"EA"，就是标签和属性都可以支持
+					
+//					restrict:"C",
+					//hi的类型定义C-class类名
+					
+//					restrict:"M",
+					//M类型定义是注释
+					
+					restrict:"EACM",
+					replace:true,
+					//替换作用，替换外层包裹的标签和替换注释
+					template:"<p>angularJs</p>"
+					//给hi这个自定义指令添加模板，内容是"<p>angularJs</p>"
+				
+				}
+				
+			})
+			
+			m1.controller('Aaa',function($scope){
+				$scope.name = "路飞";
+			})
+		</script>
+	</body>
+</html>

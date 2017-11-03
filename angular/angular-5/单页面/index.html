@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="UTF-8">
+		<title>不使用哈希值实现页面跳转</title>
+		<link rel="stylesheet" type="text/css" href="css/style.less"/>
+	</head>
+	<body>
+		<div ng-controller="Aaa">
+			<ul class="nav">
+				<li><a href="#indexView">首页</a></li>
+				<li><a href="#showView">商品展示</a></li>
+				<li><a href="#userView">我的</a></li>
+			</ul>
+			
+			<div class="oDiv" ng-view=""></div>
+			<!--ng-view 切换的主体内容(路由展示的区域)-->
+		</div>
+		
+		<script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/angular-route.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			var m1 = angular.module('myApp',['ngRoute']);
+			
+			m1.config(["$routeProvider",function($routeProvider){
+				$routeProvider
+//				通过哈希值,跳转到指定内容
+				.when('/indexView',{
+					template: 'views/indexView.html',
+					controller:'Aaa'
+				})
+				.when('/showView',{
+					template: 'views/showView.html',
+					controller:'Bbb'
+				})
+				.when('/userView',{
+					template: 'views/userView.html',
+					controller:'Ccc'
+				})
+				.otherwise({
+					redirectTo: '/indexView',
+					template: 'views/indexView.html'
+					//otherwise 初始是和哈希值错误情况下的默认处理
+					//redirectTo 默认的哈希值模板
+				})
+			}])
+			
+			m1.controller('Aaa',["$scope",function($scope){
+				$scope.name = "张三";
+			}])
+			m1.controller('Bbb',["$scope",function($scope,$http){
+				$scope.name = "李四";
+				$http({
+					method: "GEt",
+					url: "http://h6.duchengjiu.top/shop/api_goods.php"
+				}).then(function successCallBack(response){
+					console.log(response.data.data);
+					$scope.dataList = response.data.data;
+				})
+			}])
+			m1.controller('Ccc',["$scope",function($scope){
+				$scope.name = "王五";
+			}])
+			
+		</script>
+	</body>
+</html>
